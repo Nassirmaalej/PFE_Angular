@@ -1,0 +1,117 @@
+<!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<NavbarComponent></NavbarComponent>
+
+<link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Teko:400,700" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+ <a class="navbar-brand" href="#">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Orange_logo.svg/1200px-Orange_logo.svg.png" width="50">
+  </a>
+ 
+  
+
+  &nbsp; <button _ngcontent-bdt-c128="" type="button" class=" btn-round"(click)="getevent()"><strong>Show  all event </strong></button>
+  <a href="/stat">&nbsp; <button _ngcontent-bdt-c128="" type="button" class=" btn-round"><strong>Show stat</strong>  </button></a>
+
+
+ 
+</nav>
+
+<div class="col-sm-6 col-lg-3">
+  <strong style="color:rgba(15, 15, 15, 0.671)" >Connect to data base &nbsp;</strong> 
+  <bSwitch 
+      [(ngModel)]="state" (click)="getconnect()" >
+      
+  </bSwitch>
+  
+</div>
+<!------ Include the above in your HEAD tag ---------->
+
+
+     <div class="section-content">
+         <div class="container">
+             <h2>En train d'écouter la base de données <div class="spinner-border"> </div></h2>
+             <p>Use the <code>show event
+             </code>  button to refresh</p>
+             <div class="spinner-grow text-dark"></div>                     
+             <div class="spinner-grow text-dark"></div>                     
+            
+           
+             <div class="spinner-grow text-dark"></div> <div class="spinner-grow text-dark"></div>                     
+            
+           
+             <div class="spinner-grow text-dark"></div>
+             <div class="spinner-grow text-dark"></div>
+           
+             <div class="spinner-grow text-dark"></div>
+             <div class="spinner-grow text-dark"></div>
+             <div class="spinner-grow text-light"></div>
+             <div class="spinner-grow text-light"></div>
+             <div class="spinner-grow text-light"></div>
+           </div>
+           
+         <h1 class="section-header"><span class="content-header wow fadeIn " data-wow-delay="0.2s" data-wow-duration="2s"> <strong>Evenements</strong></span></h1>
+     
+
+ 
+<div class="container">
+ <div class="jumbotron">
+     
+   <div class="container-fluid">
+     <h1 class="mt-4">Tables de la base de données</h1>
+   
+         <div style="text-align:center;padding:1em 0;"> 
+            <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=fr&size=small&timezone=Africa%2FTunis" width="100%" height="90" frameborder="0" seamless></iframe> 
+           </div>
+   
+     <div class="card mb-4">
+         <div class="card-header" > <h5 style="color:rgb(153, 149, 149)">Event table</h5></div>
+         <div class="card-body">
+             <div class="table-responsive">
+               <table class="table">
+                 <thead class="thead-light">
+                   <tr>
+                     
+                     <th scope="col"><strong>Titre</strong></th>
+                     <th scope="col"><strong>Type</strong></th>
+                     <th scope="col"><strong>Details</strong></th>
+                     <th scope="col"><strong>Date</strong></th>
+     
+                   </tr>
+                 </thead>
+                 <tbody>
+                     <tr *ngFor="let r of rule">
+                         <td>{{r.label}}</td>
+                         <td>{{r.type}}</td>
+                         <td>{{r.detail}}</td>
+                         <td>{{r.date}} </td>
+                      </tr>
+                   
+                 </tbody>
+               </table>
+             </div>
+         </div>
+     </div>
+ </div>
+
+ </div>
+ </div>
+
+
+
+
+
+
