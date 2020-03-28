@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { jqxBarGaugeModule }  from 'jqwidgets-ng/jqxbargauge';  
 
+
 @NgModule({
     declarations: [
         AppComponent,
