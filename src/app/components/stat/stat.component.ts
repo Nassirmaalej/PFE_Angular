@@ -39,6 +39,15 @@ export class StatComponent implements OnInit {
   rulejulw:Observable<rule[]>;
   ruleoutw:Observable<rule[]>;
   rulesepw:Observable<rule[]>;
+  rulejand:Observable<rule[]>;
+  rulefevd:Observable<rule[]>;
+  rulemard:Observable<rule[]>;
+  ruleavrd:Observable<rule[]>;
+  rulemaid:Observable<rule[]>;
+  rulejuid:Observable<rule[]>;
+  rulejuld:Observable<rule[]>;
+  ruleoutd:Observable<rule[]>;
+  rulesepd:Observable<rule[]>;
   clickedEvent = false;
   connect : any;
  
@@ -138,7 +147,7 @@ export class StatComponent implements OnInit {
     });
 
     this.clickedEvent = true;
-    this.ruleService1.getwhritejan().subscribe(data => {
+    this.ruleService1.getwhritefev().subscribe(data => {
     this.rulefevw = data
     console.log('getwhriteing  (number of fev)...');
       console.log(this.rulefevw)
@@ -209,7 +218,85 @@ export class StatComponent implements OnInit {
       
     });
 
+    this.clickedEvent = true;
+    this.ruleService1.getdeletejan().subscribe(data => {
+    this.rulejand = data
+    console.log('getdeleteing  (number of jan)...');
+      console.log(this.rulejand)
+      
+    });
 
+    this.clickedEvent = true;
+    this.ruleService1.getdeletefev().subscribe(data => {
+    this.rulefevd = data
+    console.log('getdeleteing  (number of fev)...');
+      console.log(this.rulefevd)
+      
+    });
+
+    this.clickedEvent = true;
+    this.ruleService1.getdeletemar().subscribe(data => {
+    this.rulemard = data
+    console.log('getdeleteing *********** (number of mars)...');
+      console.log(this.rulemard)
+      
+    });
+
+
+
+
+
+
+    this.clickedEvent = true;
+    this.ruleService1.getdeleteavr().subscribe(data => {
+    this.ruleavrd= data
+    console.log('getdeleteing  (number of avr)...');
+      console.log(this.ruleavrd)
+      
+    });
+
+
+    this.clickedEvent = true;
+    this.ruleService1.getdeletemai().subscribe(data => {
+    this.rulemaid= data
+    console.log('getdeleteing  (number of ami)...');
+      console.log(this.rulemaid)
+      
+    });
+
+
+    this.clickedEvent = true;
+    this.ruleService1.getdeletejui().subscribe(data => {
+    this.rulejuid = data
+    console.log('getdeleteing  (number of jui)...');
+      console.log(this.rulejuid)
+      
+    });
+
+    this.clickedEvent = true;
+    this.ruleService1.getdeletejul().subscribe(data => {
+    this.rulejuld = data
+    console.log('getdeleteing  (number of juillet)...');
+      console.log(this.rulejuld)
+      
+    });
+
+    
+    this.clickedEvent = true;
+    this.ruleService1.getdeleteout().subscribe(data => {
+    this.ruleoutd = data
+    console.log('getdeleteing  (number of out)...');
+      console.log(this.ruleoutw)
+      
+    });
+
+    this.clickedEvent = true;
+    this.ruleService1.getdeletesep().subscribe(data => {
+    this.rulesepd = data
+    console.log('getdeleteing  (number of sep)...');
+      console.log(this.rulesepd)
+      
+    });
 
 
 
@@ -261,7 +348,7 @@ export class StatComponent implements OnInit {
     };
 
     var dataSecond = {
-      data: [5, 1, 1, 1, 2, 2, 3, 3, 4, 4, 5, 6],
+      data: [this.rulejand, this.rulefevd , this.rulemard, this.ruleavrd, this.rulemaid, this.rulejuid, this.rulejuld, this.ruleoutd,  this.rulesepd, 0, 0],
       fill: false,
       borderColor: '#51CACF',
       backgroundColor: 'transparent',
@@ -440,13 +527,24 @@ export class StatComponent implements OnInit {
       }
     });
 
+
+
+
+
+
+
+
+
+
+
+
   }
 
  
 
 
   
-
+///
 
 
   

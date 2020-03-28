@@ -12,7 +12,9 @@ import { RuleComponent } from './components/rule/rule.component';
 import { StatComponent } from './components/stat/stat.component';
 import { TestComponent } from './components/test/test.component';
 import { Test1Component } from './components/test1/test1.component';
-import {LinechartComponent} from './components/linechart/linechart.component'
+import {LinechartComponent} from './components/linechart/linechart.component';
+import { Login1Component } from './components/login1/login1.component';
+
 const routes: Routes =[
     { path: '', redirectTo: 'index', pathMatch: 'full' },
     { path: 'index',                component: ComponentsComponent },
@@ -23,8 +25,10 @@ const routes: Routes =[
     { path: 'test1',                component: Test1Component },
     { path: 'nucleoicons',          component: NucleoiconsComponent },
     { path: 'examples/landing',     component: LandingComponent },
-    { path: 'examples/login',       component: LoginComponent },
-    { path: 'examples/profile',     component: ProfileComponent }
+    { path: 'login',       component: LoginComponent },
+    { path: 'examples/profile',     component: ProfileComponent },
+    { path: 'login1',       component: Login1Component },
+
 ];
 
 @NgModule({

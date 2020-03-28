@@ -9,29 +9,24 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
 
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
- <a class="navbar-brand" href="#">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Orange_logo.svg/1200px-Orange_logo.svg.png" width="50">
-  </a>
- 
+<br>
+<br>
   
+<br>
 
-  &nbsp; <button _ngcontent-bdt-c128="" type="button" class=" btn-round"(click)="getevent()"><strong>Show  all event </strong></button>
-  <a href="/stat">&nbsp; <button _ngcontent-bdt-c128="" type="button" class=" btn-round"><strong>Show stat</strong>  </button></a>
+
 
 
  
 </nav>
 
+<!------ Include the above in your HEAD tag ---------->
+
 <div class="col-sm-6 col-lg-3">
-  <strong style="color:rgba(15, 15, 15, 0.671)" >Connect to data base &nbsp;</strong> 
+  <strong style="color:rgba(233, 89, 5, 0.925)" >Connect to data base &nbsp;</strong> 
   <bSwitch 
       [(ngModel)]="state" (click)="getconnect()" >
       
@@ -43,25 +38,16 @@
 
      <div class="section-content">
          <div class="container">
-             <h2>En train d'écouter la base de données <div class="spinner-border"> </div></h2>
+             <h2>En train d'écouter la base de données <div class="spinner-border"> 
+
+
+
+             </div></h2><i class="fas fa-spinner fa-spin"></i>
+             <i class="fas fa-spinner fa-spin"></i><i class="fas fa-spinner fa-spin"></i><i class="fas fa-spinner fa-spin"></i><i class="fas fa-spinner fa-spin"></i>
+             <i class="fas fa-spinner fa-spin"></i><i class="fas fa-spinner fa-spin"></i><i class="fas fa-spinner fa-spin"></i><i class="fas fa-spinner fa-spin"></i>
              <p>Use the <code>show event
              </code>  button to refresh</p>
-             <div class="spinner-grow text-dark"></div>                     
-             <div class="spinner-grow text-dark"></div>                     
             
-           
-             <div class="spinner-grow text-dark"></div> <div class="spinner-grow text-dark"></div>                     
-            
-           
-             <div class="spinner-grow text-dark"></div>
-             <div class="spinner-grow text-dark"></div>
-           
-             <div class="spinner-grow text-dark"></div>
-             <div class="spinner-grow text-dark"></div>
-             <div class="spinner-grow text-light"></div>
-             <div class="spinner-grow text-light"></div>
-             <div class="spinner-grow text-light"></div>
-           </div>
            
          <h1 class="section-header"><span class="content-header wow fadeIn " data-wow-delay="0.2s" data-wow-duration="2s"> <strong>Evenements</strong></span></h1>
      
@@ -71,7 +57,8 @@
  <div class="jumbotron">
      
    <div class="container-fluid">
-     <h1 class="mt-4">Tables de la base de données</h1>
+    <button _ngcontent-ulo-c128="" type="button" class="btn btn-primary btn-round" (click)="getevent()"> <strong> Tous les Evenements</strong>   </button>
+
    
          <div style="text-align:center;padding:1em 0;"> 
             <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=fr&size=small&timezone=Africa%2FTunis" width="100%" height="90" frameborder="0" seamless></iframe> 

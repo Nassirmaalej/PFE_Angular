@@ -36,6 +36,34 @@ export class RuleService {
 
 
 
+
+
+  private baseUrldeletejan='http://localhost:8081/regle/statdeletejan';
+  private baseUrldeletefev='http://localhost:8081/regle/statdeletefev';
+  private baseUrldeletemar='http://localhost:8081/regle/statdeletemar';
+  private baseUrldeleteavr='http://localhost:8081/regle/statdeleteavr';
+  private baseUrldeletemai='http://localhost:8081/regle/statdeletemai';
+  private baseUrldeletejui='http://localhost:8081/regle/statdeletejui';
+  private baseUrldeletejul='http://localhost:8081/regle/statdeletejul';
+  private baseUrldeleteout='http://localhost:8081/regle/statdeleteout';
+  private baseUrldeletesep='http://localhost:8081/regle/statdeletesep';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   private headers = new Headers({'Content-Type':'application/json'});
   
   constructor(private http: HttpClient) { }
@@ -105,7 +133,26 @@ export class RuleService {
   {return this.http.get(this.baseUrlwhritesep);}
 
 
+  getdeletejan() : Observable<any> 
+  {return this.http.get(this.baseUrldeletejan);}
 
+ getdeletefev() : Observable<any> 
+  {return this.http.get(this.baseUrldeletefev);}
+ getdeletemar() : Observable<any> 
+  {return this.http.get(this.baseUrldeletemar);}
+ getdeleteavr() : Observable<any> 
+  {return this.http.get(this.baseUrldeleteavr);}
+ getdeletemai() : Observable<any> 
+  {return this.http.get(this.baseUrldeletemai);}
+ getdeletejui() : Observable<any> 
+  {return this.http.get(this.baseUrldeletejui);}
+ getdeletejul() : Observable<any> 
+  {return this.http.get(this.baseUrldeletejul);}
+ getdeleteout() : Observable<any> 
+  {return this.http.get(this.baseUrldeleteout);}
+
+ getdeletesep() : Observable<any> 
+  {return this.http.get(this.baseUrldeletesep);}
 
 
 

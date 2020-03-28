@@ -19,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { TestComponent } from './test/test.component';
 import { Test1Component } from './test1/test1.component';
 import { LinechartComponent } from './linechart/linechart.component';
+import { Login1Component } from './login1/login1.component';
 
 @NgModule({
     imports: [
@@ -42,7 +43,9 @@ import { LinechartComponent } from './linechart/linechart.component';
         StatComponent,
         TestComponent,
         Test1Component,
-        LinechartComponent
+        LinechartComponent,
+        
+        Login1Component
     ],
     exports:[ ComponentsComponent ]
 })
