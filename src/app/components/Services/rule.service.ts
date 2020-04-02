@@ -51,6 +51,15 @@ export class RuleService {
 
 
 
+  private baseUrlupdatejan='http://localhost:8081/regle/statupdatejan';
+  private baseUrlupdatefev='http://localhost:8081/regle/statupdatefev';
+  private baseUrlupdatemar='http://localhost:8081/regle/statupdatemar';
+  private baseUrlupdateavr='http://localhost:8081/regle/statupdateavr';
+  private baseUrlupdatemai='http://localhost:8081/regle/statupdatemai';
+  private baseUrlupdatejui='http://localhost:8081/regle/statupdatejui';
+  private baseUrlupdatejul='http://localhost:8081/regle/statupdatejul';
+  private baseUrlupdateout='http://localhost:8081/regle/statupdateout';
+  private baseUrlupdatesep='http://localhost:8081/regle/statupdatesep';
 
 
 
@@ -111,6 +120,9 @@ export class RuleService {
 
 
 
+
+
+
   getwhritejan() : Observable<any> 
   {return this.http.get(this.baseUrlwhritejan);}
 
@@ -128,14 +140,17 @@ export class RuleService {
   {return this.http.get(this.baseUrlwhritejul);}
   getwhriteout() : Observable<any> 
   {return this.http.get(this.baseUrlwhriteout);}
-
   getwhritesep() : Observable<any> 
   {return this.http.get(this.baseUrlwhritesep);}
 
 
+
+
+
+
+
   getdeletejan() : Observable<any> 
   {return this.http.get(this.baseUrldeletejan);}
-
  getdeletefev() : Observable<any> 
   {return this.http.get(this.baseUrldeletefev);}
  getdeletemar() : Observable<any> 
@@ -150,11 +165,32 @@ export class RuleService {
   {return this.http.get(this.baseUrldeletejul);}
  getdeleteout() : Observable<any> 
   {return this.http.get(this.baseUrldeleteout);}
-
  getdeletesep() : Observable<any> 
   {return this.http.get(this.baseUrldeletesep);}
 
 
+
+
+
+
+  getupdatejan() : Observable<any> 
+  {return this.http.get(this.baseUrlupdatejan);}
+ getupdatefev() : Observable<any> 
+  {return this.http.get(this.baseUrlupdatefev);}
+ getupdatemar() : Observable<any> 
+  {return this.http.get(this.baseUrlupdatemar);}
+ getupdateavr() : Observable<any> 
+  {return this.http.get(this.baseUrlupdateavr);}
+ getupdatemai() : Observable<any> 
+  {return this.http.get(this.baseUrlupdatemai);}
+ getupdatejui() : Observable<any> 
+  {return this.http.get(this.baseUrlupdatejui);}
+ getupdatejul() : Observable<any> 
+  {return this.http.get(this.baseUrlupdatejul);}
+ getupdateout() : Observable<any> 
+  {return this.http.get(this.baseUrlupdateout);}
+ getupdatesep() : Observable<any> 
+  {return this.http.get(this.baseUrlupdatesep);}
 
 
 

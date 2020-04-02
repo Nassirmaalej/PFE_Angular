@@ -5,16 +5,17 @@ import { RuleService } from '../Services/rule.service';
 import { rule } from '../Services/rule';
 
 import {Chart} from 'Chart.js';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-stat',
-  templateUrl: './stat.component.html',
-  styleUrls: ['./stat.component.css']
+  templateUrl: './statrule.component.html',
+  styleUrls: ['./statrule.component.css']
 })
-export class StatComponent implements OnInit {
+export class StatruleComponent  {
 
   
-  constructor(private ruleService1: RuleService,
+  constructor(private ruleService1: RuleService,private httpClient: HttpClient,
     private router: Router) { }
   public isCollapsed = true;
   rules: Array<any>;
@@ -59,7 +60,12 @@ export class StatComponent implements OnInit {
   rulesepu:Observable<rule[]>;
   clickedEvent = false;
   connect : any;
- 
+  url = 'http://localhost:8081/regle/listrule';  
+  data: rule[];  
+  date = [];  
+  Run = [1,2,20,2,3,3,3,3,3,3,3,3,3];  
+  Linechart = [];  
+  myChart=[] ;
 
     
   getx() {
@@ -431,92 +437,67 @@ export class StatComponent implements OnInit {
 
 
 
+    this.httpClient.get(this.url).subscribe((result: rule[]) => {  
+      result.forEach(x => {  
+        this.date.push(x.date);  
+      
+      });  
+      console.log(this.date);
+      this.Linechart = new Chart('canvas', {  
+        type: 'doughnut',  
+        data: {  
+         
+        
 
-
-
-
-
-    var speedCanvas = document.getElementById("speedChart");
-
-    var dataFirst = {
-      data: [this.rulejanw, this.rulefevw , this.rulemarw, this.ruleavrw, this.rulemaiw, this.rulejuiw, this.rulejulw, this.ruleoutw,  this.rulesepw, 0, 0],
-      fill: false,
-      borderColor: '#fbc658',
-      backgroundColor: 'transparent',
-      pointBorderColor: '#fbc658',
-      pointRadius: 4,
-      pointHoverRadius: 4,
-      pointBorderWidth: 8,
-    };
-
-    var dataSecond = {
-      data: [this.rulejand, this.rulefevd , this.rulemard, this.ruleavrd, this.rulemaid, this.rulejuid, this.rulejuld, this.ruleoutd,  this.rulesepd, 0, 0],
-      fill: false,
-      borderColor: '#51CACF',
-      backgroundColor: 'transparent',
-      pointBorderColor: '#51CACF',
-      pointRadius: 4,
-      pointHoverRadius: 4,
-      pointBorderWidth: 8
-    };
-
-    var dataThird = {
-      data: [this.rulejanu, this.rulefevu , this.rulemaru, this.ruleavru, this.rulemaiu, this.rulejuiu, this.rulejulu, this.ruleoutu,  this.rulesepu, 0, 0],
-      fill: false,
-      borderColor: '#E7374C',
-      backgroundColor: 'transparent',
-      pointBorderColor: '#E7374C',
-      pointRadius: 4,
-      pointHoverRadius: 4,
-      pointBorderWidth: 8
-    };
-
-
-
-
-    var speedData = {
-      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-      datasets: [dataFirst, dataSecond,dataThird]
-    };
-
-    var chartOptions = {
-      legend: {
-        display: false,
-        position: 'top'
-      }
-    };
-
-    var lineChart = new Chart(speedCanvas, {
-      type: 'line',
-      hover: false,
-      data: speedData,
-      options: chartOptions
-    });
-
-    
-
-   
+          datasets: [  
+            {  
+              data: this.Run,  
+              borderColor: '#3cb371',  
+               backgroundColor: [  
+                "#00FFEC",  
+                "#03C1B3",  
+                "#0BF57C",  
+                "#05756D",  
+                "#0AD4FC",  
+                "#06FEB7",  
+                "#8DC7D6",  
+                "#D9F4F2",  
+                "#8CF5EC",  
+                "#5ACAC3",  
+                "#10476D",  
+                "#0BF5A7"
+              ],   
+            }  
+          ]  
+        },  
+        options: {  
+          legend: {  
+            display: false  
+          },  
+          scales: {  
+            xAxes: [{  
+              display: true  
+            }],  
+            yAxes: [{  
+              display: true  
+            }],  
+          }  
+        }  
+      });  
+    });  
   
 
 
 
 
-
-
-
-
-
-
-
-
-
+    
 
 
 
 
     var ctx = document.getElementById("myBarChart");
     var myLineChart = new Chart(ctx, {
-      type: 'bar',
+      type: 'polarArea',
       data: {
         labels: ["January", "February", "March", "April", "May", "June"],
         datasets: [{
@@ -558,23 +539,8 @@ export class StatComponent implements OnInit {
 
 
 
-    var ctx = document.getElementById("myPieChart");
-    var myPieChart = new Chart(ctx, {
-      type: 'polarArea',
-      data: {
-        labels: ["whrite", "delte", "update"],
-        datasets: [{
-          data: [this.rulex, this.ruley, this.rulez],
-          backgroundColor: [
-          '#fcc468',
-          '#4acccd',
-          '#FF1700'],
-        }],
-      },
-    });
+  
     
-
-
 
 
 

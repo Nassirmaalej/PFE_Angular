@@ -8,10 +8,10 @@ import {Chart} from 'Chart.js';
 
 @Component({
   selector: 'app-stat',
-  templateUrl: './stat.component.html',
-  styleUrls: ['./stat.component.css']
+  templateUrl: './stat1.component.html',
+  styleUrls: ['./stat1.component.css']
 })
-export class StatComponent implements OnInit {
+export class Stat1Component implements OnInit {
 
   
   constructor(private ruleService1: RuleService,
@@ -48,15 +48,6 @@ export class StatComponent implements OnInit {
   rulejuld:Observable<rule[]>;
   ruleoutd:Observable<rule[]>;
   rulesepd:Observable<rule[]>;
-  rulejanu:Observable<rule[]>;
-  rulefevu:Observable<rule[]>;
-  rulemaru:Observable<rule[]>;
-  ruleavru:Observable<rule[]>;
-  rulemaiu:Observable<rule[]>;
-  rulejuiu:Observable<rule[]>;
-  rulejulu:Observable<rule[]>;
-  ruleoutu:Observable<rule[]>;
-  rulesepu:Observable<rule[]>;
   clickedEvent = false;
   connect : any;
  
@@ -295,7 +286,7 @@ export class StatComponent implements OnInit {
     this.ruleService1.getdeleteout().subscribe(data => {
     this.ruleoutd = data
     console.log('getdeleteing  (number of out)...');
-      console.log(this.ruleoutd)
+      console.log(this.ruleoutw)
       
     });
 
@@ -306,99 +297,6 @@ export class StatComponent implements OnInit {
       console.log(this.rulesepd)
       
     });
-
-
-
-    this.clickedEvent = true;
-    this.ruleService1.getupdatejan().subscribe(data => {
-    this.rulejanu= data
-    console.log('geting  (number of jan)...');
-      console.log(this.rulejanu)
-      
-    });
-
-    this.clickedEvent = true;
-    this.ruleService1.getupdatefev().subscribe(data => {
-    this.rulefevu = data
-    console.log('getupdeting  (number of fev)...');
-      console.log(this.rulefevu)
-      
-    });
-
-    this.clickedEvent = true;
-    this.ruleService1.getupdatemar().subscribe(data => {
-    this.rulemaru = data
-    console.log('getupdetinging *********** (number of mars)...');
-      console.log(this.rulemaru)
-      
-    });
-
-
-
-
-
-
-    this.clickedEvent = true;
-    this.ruleService1.getupdateavr().subscribe(data => {
-    this.ruleavru= data
-    console.log('getupdeting  (number of avr)...');
-      console.log(this.ruleavru)
-      
-    });
-
-
-    this.clickedEvent = true;
-    this.ruleService1.getupdatemai().subscribe(data => {
-    this.rulemaiu= data
-    console.log('getupdeting  (number of ami)...');
-      console.log(this.rulemaiu)
-      
-    });
-
-
-    this.clickedEvent = true;
-    this.ruleService1.getupdatejui().subscribe(data => {
-    this.rulejuiu = data
-    console.log('getupdeting  (number of jui)...');
-      console.log(this.rulejuiu)
-      
-    });
-
-    this.clickedEvent = true;
-    this.ruleService1.getupdatejul().subscribe(data => {
-    this.rulejulu = data
-    console.log('getupdeting  (number of juillet)...');
-      console.log(this.rulejulu)
-      
-    });
-
-    
-    this.clickedEvent = true;
-    this.ruleService1.getupdateout().subscribe(data => {
-    this.ruleoutu = data
-    console.log('getupdeting  (number of out)...');
-      console.log(this.ruleoutu)
-      
-    });
-
-    this.clickedEvent = true;
-    this.ruleService1.getupdatesep().subscribe(data => {
-    this.rulesepu = data
-    console.log('getupdeteing  (number of sep)...');
-      console.log(this.rulesepu)
-      
-    });
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -461,7 +359,7 @@ export class StatComponent implements OnInit {
     };
 
     var dataThird = {
-      data: [this.rulejanu, this.rulefevu , this.rulemaru, this.ruleavru, this.rulemaiu, this.rulejuiu, this.rulejulu, this.ruleoutu,  this.rulesepu, 0, 0],
+      data: [9, 5, 1, 1, 2, 7, 3, 3, 4, 4, 5, 6],
       fill: false,
       borderColor: '#E7374C',
       backgroundColor: 'transparent',
@@ -511,9 +409,82 @@ export class StatComponent implements OnInit {
 
 
 
+    this.canvas = document.getElementById("chartEmail");
+    this.ctx = this.canvas.getContext("2d");
+    this.chartEmail = new Chart(this.ctx, {
+      type: 'pie',
+      data: {
+        labels: [1, 2, 3],
+        datasets: [{
+          label: "Emails",
+          pointRadius: 0,
+          pointHoverRadius: 0,
+          backgroundColor: [
+            
+            '#FF1700',
+            '#4acccd',
+            '#fcc468',
+            
+          ],
+      
+
+          borderWidth: 0,
+          data: [this.rulex, this.ruley, this.rulez ]
+        }]
+      },
 
 
 
+
+
+
+
+
+
+      options: {
+
+        legend: {
+          display: false
+        },
+
+        pieceLabel: {
+          render: 'percentage',
+          fontColor: ['white'],
+          precision: 2
+        },
+
+        tooltips: {
+          enabled: false
+        },
+
+        scales: {
+          yAxes: [{
+
+            ticks: {
+              display: false
+            },
+            gridLines: {
+              drawBorder: false,
+              zeroLineColor: "transparent",
+              color: 'rgba(255,255,255,0.05)'
+            }
+
+          }],
+
+          xAxes: [{
+            barPercentage: 1.6,
+            gridLines: {
+              drawBorder: false,
+              color: 'rgba(255,255,255,0.1)',
+              zeroLineColor: "transparent"
+            },
+            ticks: {
+              display: false,
+            }
+          }]
+        },
+      }
+    });
     var ctx = document.getElementById("myBarChart");
     var myLineChart = new Chart(ctx, {
       type: 'bar',
@@ -558,23 +529,69 @@ export class StatComponent implements OnInit {
 
 
 
+
+
+
+
+
+
+
+
+
+  }
+
+ 
+
+
+  
+///
+
+
+  
+  public canvas : any;
+  public ctx;
+  public chartColor;
+  public chartEmail;
+  public chartHours;
+
+  ngOnInit() {
     var ctx = document.getElementById("myPieChart");
     var myPieChart = new Chart(ctx, {
       type: 'polarArea',
       data: {
-        labels: ["whrite", "delte", "update"],
+        labels: ["Blue", "Red", "Yellow", "Green"],
         datasets: [{
-          data: [this.rulex, this.ruley, this.rulez],
-          backgroundColor: [
-          '#fcc468',
-          '#4acccd',
-          '#FF1700'],
+          data: [12.21, 15.58, 11.25, 8.32],
+          backgroundColor: ['#007bff', '#dc3545', '#ffc107', '#28a745'],
         }],
       },
     });
     
 
+      
 
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+
+
+
+
+
+
+
+    
 
 
 
@@ -641,22 +658,21 @@ export class StatComponent implements OnInit {
 
 
 
-  }
-
- 
 
 
+
+
+
+
+
+
+
+
+
+
+    
+    
   
-///
-
-
-  
-  public canvas : any;
-  public ctx;
-  public chartColor;
-  public chartEmail;
-  public chartHours;
-
-  ngOnInit() {}
+}
 
 }

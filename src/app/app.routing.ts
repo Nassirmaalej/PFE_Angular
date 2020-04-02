@@ -14,6 +14,8 @@ import { TestComponent } from './components/test/test.component';
 import { Test1Component } from './components/test1/test1.component';
 import {LinechartComponent} from './components/linechart/linechart.component';
 import { Login1Component } from './components/login1/login1.component';
+import { Stat1Component } from './components/stat1/stat1.component';
+import { StatruleComponent } from './components/statrule/statrule.component';
 
 const routes: Routes =[
     { path: '', redirectTo: 'index', pathMatch: 'full' },
@@ -26,8 +28,12 @@ const routes: Routes =[
     { path: 'nucleoicons',          component: NucleoiconsComponent },
     { path: 'examples/landing',     component: LandingComponent },
     { path: 'login',       component: LoginComponent },
+    { path: 'logout',       component: LoginComponent },
     { path: 'examples/profile',     component: ProfileComponent },
     { path: 'login1',       component: Login1Component },
+    { path: 'stat1',                component: Stat1Component },
+    { path: 'statrule',                component: StatruleComponent },
+
 
 ];
 

@@ -29,7 +29,7 @@
       </div>
   </div>
   </div>
-  
+  ng s c 
   <div class="section section-about-us">
       <div class="container">
           <div class="row">
@@ -41,7 +41,11 @@
         
 
 
-       
+          <div class="card mb-4">
+            <div class="card-header"><i class="fas fa-chart-area mr-1"></i><strong> Courbe de progression </strong>  </div>
+            <div class="card-body"><canvas id="myAreaChart" width="100%" height="15"></canvas></div>
+            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+          </div>
           
           <div class="row">
             <div class="col-md-4">
@@ -55,7 +59,7 @@
           
                 </div>
                 <div class="card-body ">
-                  <div class="card-body"><canvas id="myPieChart" width="50%" height="50"></canvas></div>
+                  <canvas id="chartEmail"></canvas>
                 </div>
                 <div class="card-footer ">
                   <div class="legend">
@@ -97,36 +101,23 @@
             
             </div>
             <div id="layoutSidenav_content">
-
-
-              <div class="card mb-4">
-
-                                
-                <div class="card-header"><i class="fas fa-chart-area mr-1"></i><strong> Courbe de progression </strong>  </div>
-                <div class="card-body"><canvas id="myAreaChart" width="100%" height="20"></canvas></div>
-                <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
-            
-
-            </div>
-        </div>
                 <main>
                     <div class="container-fluid">
              
                         
                         <div class="row">
-                            <div class="col-lg-7">
+                            <div class="col-lg-6">
                                 <div class="card mb-4">
                                     <div class="card-header"><i class="fas fa-chart-bar mr-1"></i><strong> Bar Chart</strong>   </div>
                                     <div class="card-body"><canvas id="myBarChart" width="100%" height="50"></canvas></div>
                                     <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
                                 </div>
                             </div>
-                            <div class="col-lg-4">
+                            <div class="col-lg-6">
                                 <div class="card mb-4">
-
-                                
-                                  <p _ngcontent-jur-c130="" class="blockquote blockquote-primary"> "I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at." <br _ngcontent-jur-c130=""><br _ngcontent-jur-c130=""><small _ngcontent-jur-c130=""> - Noaa </small></p>
-
+                                    <div class="card-header"><i class="fas fa-chart-pie mr-1"></i><strong> Pie Chart </strong>     </div>
+                                    <div class="card-body"><canvas id="myPieChart" width="100%" height="50"></canvas></div>
+                                    <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
                                 </div>
                             </div>
                         </div>

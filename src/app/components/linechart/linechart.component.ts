@@ -14,8 +14,21 @@ export class LinechartComponent implements OnInit {
   date = [];  
   Run = [2,2,2,2,3,3,3,3,3,3,3,3,3];  
   Linechart = [];  
+  myChart=[] ;
   constructor(private httpClient: HttpClient) { }  
   ngOnInit() {  
+
+
+
+
+
+
+
+
+
+
+
+
     this.httpClient.get(this.url).subscribe((result: rule[]) => {  
       result.forEach(x => {  
         this.date.push(x.date);  
@@ -52,4 +65,7 @@ export class LinechartComponent implements OnInit {
       });  
     });  
   }  
+
 }
+
+

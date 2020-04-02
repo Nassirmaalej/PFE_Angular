@@ -29,7 +29,7 @@ import { jqxBarGaugeModule }  from 'jqwidgets-ng/jqxbargauge';
   
         
     ],
-    providers: [],
+    providers: [ ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

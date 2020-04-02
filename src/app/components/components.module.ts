@@ -20,6 +20,9 @@ import { TestComponent } from './test/test.component';
 import { Test1Component } from './test1/test1.component';
 import { LinechartComponent } from './linechart/linechart.component';
 import { Login1Component } from './login1/login1.component';
+import { LogoutComponent } from './logout/logout.component';
+import { Stat1Component } from './stat1/stat1.component';
+import { StatruleComponent } from './statrule/statrule.component';
 
 @NgModule({
     imports: [
@@ -45,7 +48,13 @@ import { Login1Component } from './login1/login1.component';
         Test1Component,
         LinechartComponent,
         
-        Login1Component
+        Login1Component,
+        
+        LogoutComponent,
+        
+        Stat1Component,
+        
+        StatruleComponent
     ],
     exports:[ ComponentsComponent ]
 })

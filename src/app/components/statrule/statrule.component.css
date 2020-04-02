@@ -80,7 +80,7 @@
   
   .content-header{
       font-family: 'Oleo Script', cursive;
-      color:#fa630bd5;
+      color:#2b98f1d5;
       font-size: 45px;
     }
     
@@ -90,11 +90,11 @@
     }
     .orange-circle-button {
       box-shadow: 2px 4px 0 2px rgba(0,0,0,0.1);
-      border: .5em solid rgba(232, 76, 14, 0.856);
+      border: .5em solid rgba(47, 14, 232, 0.856);
       font-size: 1em;
       line-height: 1.1em;
-      color: #eb1010;
-      background-color: #e9602ae1;
+      color: #7610eb;
+      background-color: #5c1bf5e1;
       margin: auto;
       border-radius: 50%;
       height: 5em;
@@ -109,9 +109,9 @@
       width: 100vw;
       height: 1550px;
       background: #3a6186; /* fallback for old browsers */
-      background: -webkit-linear-gradient(to left, #3a6186 , rgb(230, 119, 8)); /* Chrome 10-25, Safari 5.1-6 */
+      background: -webkit-linear-gradient(to left, #3a6186 , rgb(12, 8, 230)); /* Chrome 10-25, Safari 5.1-6 */
       background: linear-gradient(to left, #3975b152 , #8b2e2e09); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        color : rgb(224, 34, 34);    
+        color : rgb(37, 34, 224);    
     }
     .contact-section{
       padding-top: 40px;

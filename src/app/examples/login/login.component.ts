@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { rule } from 'app/components/Services/rule';
 import { RuleService } from 'app/components/Services/rule.service';
+import { ActivatedRoute, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-login',
@@ -16,8 +18,10 @@ export class LoginComponent implements OnInit {
     data : Date = new Date();
     focus;
     focus1;
-
-    constructor(private ruleService: RuleService,) { }
+  
+    constructor(private ruleService: RuleService,private route: ActivatedRoute,
+      private router: Router,
+      ) { }
 
     ngOnInit() {
         var body = document.getElementsByTagName('body')[0];
@@ -27,6 +31,12 @@ export class LoginComponent implements OnInit {
         navbar.classList.add('navbar-transparent');
         
     }
+
+   
+
+
+      
+    
     ngOnDestroy(){
         var body = document.getElementsByTagName('body')[0];
         body.classList.remove('login-page');
