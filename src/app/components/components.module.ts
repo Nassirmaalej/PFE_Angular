@@ -23,6 +23,8 @@ import { Login1Component } from './login1/login1.component';
 import { LogoutComponent } from './logout/logout.component';
 import { Stat1Component } from './stat1/stat1.component';
 import { StatruleComponent } from './statrule/statrule.component';
+import { CrudComponent } from './crud/crud.component';
+import { AddruleComponent } from './addrule/addrule.component';
 
 @NgModule({
     imports: [
@@ -54,7 +56,13 @@ import { StatruleComponent } from './statrule/statrule.component';
         
         Stat1Component,
         
-        StatruleComponent
+        StatruleComponent,
+        
+        CrudComponent,
+        
+        AddruleComponent,
+        
+        
     ],
     exports:[ ComponentsComponent ]
 })

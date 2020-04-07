@@ -27,7 +27,16 @@
     <base href="/">
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
-    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet"
+    <base href="/"/>
+    <script src="node__modules/core-js/client/shim.min.js"></script>
+    <script src="node__modules/zone.js/dist/zone.js"></script>
+    <script src="node__modules/systemjs/dist/system.src.js"></script>
+
+    <script src="systemjs.config.js"></script>
+    <script>
+        System.import('app').catch(function (err) { console.error(err); });
+    </script>
 </head>
 <body class="sidebar-collapse">
     <app-root></app-root>

@@ -1,45 +1,22 @@
-
-<div class="page-header" filter-color="orange">
-    <div class="page-header-image" style="background-image:url(https://www.espin-ens.com/wp-content/uploads/2017/07/BI-2-600x440.jpg)"></div>
-    <div class="container">
-        <div class="col-md-4 content-center">
-            <div class="card card-login card-plain">
-                <form class="form" method="" action="">
-                    <div class="header header-primary text-center">
-                        <div class="logo-container">
-                            <img src="assets/img/now-logo.png" alt="">
-                        </div>
-                    </div>
-                    <div class="content">
-                      <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':focus===true}">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">  <i class="now-ui-icons users_circle-08"></i></span>
-                        </div>
-                          <input type="text" class="form-control" placeholder="First Name..." (focus)="focus=true" (blur)="focus=false" >
-                      </div>
-                      <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':focus1===true}">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="now-ui-icons text_caps-small"></i></span>
-                        </div>
-                          <input type="text" placeholder="Last Name..." class="form-control" (focus)="focus1=true" (blur)="focus1=false"/>
-                      </div>
-                    </div>
-                    <div class="footer text-center">
-                      <a href="/rule">  <button _ngcontent-ulo-c128="" type="button" class="btn btn-primary btn-round" (click)="getconnect()"> <strong  > LOGIN </strong>   </button></a>
-                    </div>
-                    <div class="pull-left">
-                        <h6>
-                            <a href="#pablo" class="link">Create Account</a>
-                        </h6>
-                    </div>
-                    <div class="pull-right">
-                        <h6>
-                            <a href="#pablo" class="link">Need Help?</a>
-                        </h6>
-                    </div>
-                </form>
-            </div>
-        </div>
+<div class="container col-lg-6">
+    <h1 class="text-center">Login</h1>
+    <div class="card">
+      <div class="card-body">
+        <form class="form-group">
+          <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
+          <div class="alert alert-success" *ngIf='loginSuccess'>{{successMessage}}</div>
+          <div class="form-group">
+            <label for="email">User Name :</label>
+            <input type="text" class="form-control" id="username" [(ngModel)]="username" placeholder="Enter User Name"
+              name="username">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" [(ngModel)]="password" id="password" placeholder="Enter password"
+              name="password">
+          </div>
+          <button (click)=handleLogin()  class="btn btn-success">Login</button>
+        </form>
+      </div>
     </div>
-   
-</div>
+  </div>

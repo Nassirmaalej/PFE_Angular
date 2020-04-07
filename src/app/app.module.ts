@@ -9,6 +9,8 @@ import { ExamplesModule } from './examples/examples.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { jqxBarGaugeModule }  from 'jqwidgets-ng/jqxbargauge';  
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpInterceptorService } from './http-interceptor.service';
 
 
 @NgModule({
@@ -29,7 +31,11 @@ import { jqxBarGaugeModule }  from 'jqwidgets-ng/jqxbargauge';
   
         
     ],
-    providers: [ ],
+    providers: [ {
+        provide: HTTP_INTERCEPTORS,
+        useClass: HttpInterceptorService,
+        multi: true
+      }],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -3,6 +3,9 @@ import { Observable } from 'rxjs';
 import { rule } from 'app/components/Services/rule';
 import { RuleService } from 'app/components/Services/rule.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { HttpHeaders } from '@angular/common/http';
+import { map } from 'rxjs/operators';
+import { AuthenticationService } from 'app/login/auth.service';
 
 
 @Component({
@@ -11,6 +14,9 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+  ngOnInit(): void {
+    throw new Error("Method not implemented.");
+  }
     rules: Array<any>;
     rule: Observable<rule[]>;
     connect: Observable<rule[]>;
@@ -18,47 +24,29 @@ export class LoginComponent implements OnInit {
     data : Date = new Date();
     focus;
     focus1;
+    username: string;
+  password : string;
+  errorMessage = 'Invalid Credentials';
+  successMessage: string;
+  invalidLogin = false;
+  loginSuccess = false;
   
-    constructor(private ruleService: RuleService,private route: ActivatedRoute,
+    constructor(private ruleService: RuleService,private route: ActivatedRoute, private authenticationService: AuthenticationService ,
       private router: Router,
       ) { }
 
-    ngOnInit() {
-        var body = document.getElementsByTagName('body')[0];
-        body.classList.add('login-page');
-
-        var navbar = document.getElementsByTagName('nav')[0];
-        navbar.classList.add('navbar-transparent');
-        
-    }
-
-   
-
-
-      
-    
-    ngOnDestroy(){
-        var body = document.getElementsByTagName('body')[0];
-        body.classList.remove('login-page');
-
-        var navbar = document.getElementsByTagName('nav')[0];
-        navbar.classList.remove('navbar-transparent');
-
-
-
-        
-    }
-    getconnect(){
-        this.clickedEvent = true;
-        this.ruleService.getconnect().subscribe(data => {
-        this.connect = data
-        
-          console.log(this.connect)
-        });
-        console.log('connected');
-        }
-      
-      
-      
+ 
+      handleLogin() {
+        this.authenticationService.authenticationService(this.username, this.password).subscribe((result)=> {
+          this.invalidLogin = false;
+          this.loginSuccess = true;
+          this.successMessage = 'Login Successful.';
+          this.router.navigate(['/stat']);
+         
+        }, () => {
+          this.invalidLogin = true;
+          this.loginSuccess = false;
+        });      
+      }
 
 }

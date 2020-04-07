@@ -1,0 +1,44 @@
+
+<br>
+<br>
+
+
+<button (click)= "getregle()" class="btn btn-danger">List</button>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Employee List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>category</th>
+            <th>Delte</th>
+            <th>Edit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let x of regle ">
+
+          <td>{{x.category}}</td>
+           <td>{{x.code}}</td>
+           <td>{{x.creation_date}}</td>
+           <td>{{x.description}}</td>
+           <td>{{x.last_contributor_code_alliance}}</td>
+           <td>{{x.last_update_date}}</td>
+           <td>{{x.market_segment_profession}}</td>
+           <td>{{x.media}}</td>
+           <td>{{x.reason}}</td>
+           <td>{{x.sub_type}}</td>
+           <td>{{x.validity_first_date}}</td>
+           <td>{{x.validity_last_date}}</td>
+           <td>{{x.expression_id}}</td>
+           <td>{{x.target}}</td>
+           
+            <td><button (click)=deleteregle(x) class="btn btn-danger">Delete</button>
+              <td> <button class="btn btn-primary" (click)=updateregle(x)>Edit</button></td>            
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
