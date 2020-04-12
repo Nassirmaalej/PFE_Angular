@@ -25,6 +25,7 @@ import { Stat1Component } from './stat1/stat1.component';
 import { StatruleComponent } from './statrule/statrule.component';
 import { CrudComponent } from './crud/crud.component';
 import { AddruleComponent } from './addrule/addrule.component';
+import { AddComponent } from './add/add.component';
 
 @NgModule({
     imports: [
@@ -61,6 +62,8 @@ import { AddruleComponent } from './addrule/addrule.component';
         CrudComponent,
         
         AddruleComponent,
+        
+        AddComponent,
         
         
     ],

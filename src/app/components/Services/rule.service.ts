@@ -11,6 +11,30 @@ export class RuleService {
   private baseUrlx='http://localhost:8081/regle/statx';
   private baseUrly='http://localhost:8081/regle/staty';
   private baseUrlz='http://localhost:8081/regle/statz';
+
+
+  private baseUrlcalculRouting='http://localhost:8081/regle/calculRouting'
+  private baseUrlcalculpreCalcul='http://localhost:8081/regle/calculRouting';
+  private baseUrlcalculParcours='http://localhost:8081/regle/calculRouting';
+
+
+
+  private baseUrlstatroutingdelete='http://localhost:8081/regle/statroutingdelete'
+  private baseUrlstatpreCalculdelete='http://localhost:8081/regle/statpreCalculdelete';
+  private baseUrlstatParcoursdelete='http://localhost:8081/regle/statParcoursdelete';
+
+
+
+
+
+
+  private baseUrlstatRoutingupdate='http://localhost:8081/regle/statroutingupdate'
+  private baseUrlpreCalculupdate='http://localhost:8081/regle/statpreCalculupdate';
+  private baseUrlParcoursupdate='http://localhost:8081/regle/statParcoursupdate';
+
+
+
+
   
   private baseUrljan='http://localhost:8081/regle/statjan';
   private baseUrlfev='http://localhost:8081/regle/statfev';
@@ -75,31 +99,28 @@ export class RuleService {
 
   private headers = new Headers({'Content-Type':'application/json'});
   
+  
   constructor(private http: HttpClient) { }
 
   getevent(): Observable<any> {
-    return this.http.get(this.baseUrl1);
-   
-  }
-  
+    return this.http.get(this.baseUrl1); 
+  } 
   getconnect(): Observable<any> {
-    return this.http.get(this.baseUrl);
-   
+      return this.http.get(this.baseUrl); 
   }
+
 
   getx() : Observable<any> 
   {return this.http.get(this.baseUrlx);}
-
   gety() : Observable<any> 
   {return this.http.get(this.baseUrly);}
-
   getz() : Observable<any> 
   {return this.http.get(this.baseUrlz);}
+
 
   
   getjan() : Observable<any> 
   {return this.http.get(this.baseUrljan);}
-
   getfev() : Observable<any> 
   {return this.http.get(this.baseUrlfev);}
   getmar() : Observable<any> 
@@ -114,7 +135,6 @@ export class RuleService {
   {return this.http.get(this.baseUrljul);}
   getout() : Observable<any> 
   {return this.http.get(this.baseUrlout);}
-
   getsep() : Observable<any> 
   {return this.http.get(this.baseUrlsep);}
 
@@ -123,9 +143,9 @@ export class RuleService {
 
 
 
+
   getwhritejan() : Observable<any> 
   {return this.http.get(this.baseUrlwhritejan);}
-
   getwhritefev() : Observable<any> 
   {return this.http.get(this.baseUrlwhritefev);}
   getwhritemar() : Observable<any> 
@@ -194,6 +214,29 @@ export class RuleService {
 
 
 
+
+  getcalculRouting():Observable<any>
+  {return this.http.get(this.baseUrlcalculRouting)}
+  getcalculpreCalcul():Observable<any>
+  {return this.http.get(this.baseUrlcalculpreCalcul)}
+  getcalculParcours():Observable<any>
+  {return this.http.get(this.baseUrlcalculParcours)}
+
+
+  getstatpreCalculdelete():Observable<any>
+  {return this.http.get(this.baseUrlstatpreCalculdelete)}
+  getstatroutingdelete():Observable<any>
+  {return this.http.get(this.baseUrlstatroutingdelete)}
+  getstatParcoursdelete():Observable<any>
+  {return this.http.get(this.baseUrlstatParcoursdelete)}
+
+
+  getstatpreCalculupdate():Observable<any>
+  {return this.http.get(this.baseUrlpreCalculupdate)}
+  getstatroutingupdate():Observable<any>
+  {return this.http.get(this.baseUrlstatRoutingupdate)}
+  getstatParcoursupdate():Observable<any>
+  {return this.http.get(this.baseUrlParcoursupdate)}
 
 
 

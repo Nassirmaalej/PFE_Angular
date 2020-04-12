@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { Regle } from '../Services/regle';
 import { RegleService } from '../Services/regle.service';
 import { Router } from '@angular/router';
+import { Regle } from '../Services/regle';
 
 @Component({
-  selector: 'app-addrule',
-  templateUrl: './addrule.component.html',
-  styleUrls: ['./addrule.component.css']
+  selector: 'app-add',
+  templateUrl: './add.component.html',
+  styleUrls: ['./add.component.css']
 })
-export class AddruleComponent implements OnInit {
+export class AddComponent implements OnInit {
   regle: Regle = new Regle();
   submitted = false;
   constructor( private regleService: RegleService , private router: Router ) { }
@@ -17,7 +17,7 @@ export class AddruleComponent implements OnInit {
 
     this.regle=this.regleService.getter()
     console.log(this.regle)
-
+    this.regle = new Regle();
   }
 
 

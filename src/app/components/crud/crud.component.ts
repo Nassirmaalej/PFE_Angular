@@ -39,6 +39,8 @@ export class CrudComponent implements OnInit {
          
         },
         error => console.log(error));
+        this.router.navigate(['/crud']);
+
   }
 
   updateregle(regle) {

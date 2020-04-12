@@ -18,6 +18,7 @@ import { Stat1Component } from './components/stat1/stat1.component';
 import { StatruleComponent } from './components/statrule/statrule.component';
 import { CrudComponent } from './components/crud/crud.component';
 import { AddruleComponent } from './components/addrule/addrule.component';
+import { AddComponent } from './components/add/add.component';
 
 const routes: Routes =[
     { path: 'index',                component: ComponentsComponent },
@@ -37,8 +38,8 @@ const routes: Routes =[
     { path: 'stat1',                component: Stat1Component },
     { path: 'statrule',                component: StatruleComponent },
     { path: 'crud',                component: CrudComponent },
-    { path: 'add',                component: AddruleComponent },
-
+    { path: 'edit',                component: AddruleComponent },
+    { path: 'add',                component: AddComponent },
 
 ];
 

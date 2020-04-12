@@ -22,7 +22,7 @@
     
 
   <div class="page-header page-header-small">
-      <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('https://englishlive.ef.com/es-mx/blog/wp-content/uploads/sites/8/2018/09/Aprende-ingl%C3%A9s-bancario-y-financiero.jpg');" >
+      <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('https://www.altran.com/as-content/uploads/sites/8/2017/05/9-2_analytics-tessela_1600.jpg');" >
 
       </div>
 
@@ -33,7 +33,7 @@
               
               <div class="text-center">
                   <br>
-        <button _ngcontent-ulo-c128="" type="button" class="btn btn-primary btn-round" (click)="getx()" (click)="getx()"> <strong (click)="getx()" >Voir tous les Statististiques</strong>   </button>
+        <button _ngcontent-ulo-c128="" type="button" class="btn btn-info btn-round" (click)="getx()" (click)="getx()"> <strong (click)="getx()" >Voir tous les Statististiques</strong>   </button>
 
               </div>
           </div>
@@ -45,8 +45,7 @@
       <div class="container">
           <div class="row">
               <div class="col-md-8 ml-auto mr-auto text-center">
-                  <h2 class="title">      &nbsp;&nbsp; <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> <strong style="color:rgba(18, 159, 240, 0.753);" >  Number of events :</strong>  {{this.rulex + this.ruley + this. rulez}} 
-                  </h2>
+                 
               </div>
           </div>
         
@@ -63,8 +62,11 @@
                 <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
            
               </div>
-              <p _ngcontent-jur-c130="" class="blockquote blockquote-primary" style="color:rgba(20, 171, 231, 0.973);"> "I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at." <br _ngcontent-jur-c130=""><br _ngcontent-jur-c130=""><small _ngcontent-jur-c130="">  </small></p>
-
+              <div class="card ">
+              <div class="card-header"><i class="fas fa-chart-area mr-1"></i><strong> Courbe de progression </strong>  </div>
+              <div class="card-body"><canvas id="myAreaChart1" width="100%" height="50"></canvas></div>
+              <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+         </div>
             </div>
             <div class="col-md-7">
               <div class="card card-chart">
@@ -103,16 +105,20 @@
              
                         
                         <div class="row">
-                            <div class="col-lg-7">
-                                <div class="card mb-4">
+                            <div class="col-lg-5">
+                                <div class="card mb-2">
                                     <div class="card-header"><i class="fas fa-chart-bar mr-1"></i><strong> Bar Chart</strong>   </div>
                                     <div class="card-body"><canvas id="myBarChart" width="100%" height="50"></canvas></div>
                                     <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
                                 </div>
                             </div>
-                            <div class="col-lg-4">
-                
-                            </div>
+                            <div class="col-lg-5">
+                              <div class="card mb-2">
+                                  <div class="card-header"><i class="fas fa-chart-bar mr-1"></i><strong> Bar Chart</strong>   </div>
+                                  <div class="card-body"><canvas id="myBarChart1" width="100%" height="50"></canvas></div>
+                                  <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+                              </div>
+                          </div>
                         </div>
                     </div>
                 </main>

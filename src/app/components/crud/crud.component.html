@@ -1,44 +1,97 @@
+<!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Teko:400,700" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<div class="wrapper">
+  
+    
+
+  <div class="page-header page-header-small">
+      <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/red-futuristic-pulse-hud-audio-digital-equalizer-technology-michal-steflovic.jpg');" >
+
+      </div>
+
+      <div class="container">
+          <div class="content-center">
+            <h1 class="section-header"><span class="content-header wow fadeIn " data-wow-delay="0.2s" data-wow-duration="2s"> <strong>Gestion de la table rule</strong></span></h1>        
+              <div class="text-center">
+        <button _ngcontent-ulo-c128="" type="button" class="btn btn-primary btn-round" (click)= "getregle()" class="btn btn-danger"><strong> Listes des régles </strong> </button>
+            
+      
+      
+      
+      </div>
+          </div>
+      </div>
+  </div>
+  </div>
+
 
 <br>
 <br>
 
 
-<button (click)= "getregle()" class="btn btn-danger">List</button>
-<div class="panel panel-primary">
-    <div class="panel-heading">
-      <h2>Employee List</h2>
-    </div>
-    <div class="panel-body">
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th>category</th>
-            <th>Delte</th>
-            <th>Edit</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let x of regle ">
 
-          <td>{{x.category}}</td>
-           <td>{{x.code}}</td>
-           <td>{{x.creation_date}}</td>
-           <td>{{x.description}}</td>
-           <td>{{x.last_contributor_code_alliance}}</td>
-           <td>{{x.last_update_date}}</td>
-           <td>{{x.market_segment_profession}}</td>
-           <td>{{x.media}}</td>
-           <td>{{x.reason}}</td>
-           <td>{{x.sub_type}}</td>
-           <td>{{x.validity_first_date}}</td>
-           <td>{{x.validity_last_date}}</td>
-           <td>{{x.expression_id}}</td>
-           <td>{{x.target}}</td>
+
+
+<div class="container">
+  <div class="jumbotron">
+      
+    <div class="container-fluid">
+ 
+ 
+    
+      <div class="card mb-6">
+ 
+       
+       <div class="card-header" > <h5 style="color:rgb(231, 39, 5)"><strong>TABLEAUX DES EVENEMENTS</strong> </h5></div>
+       
+       <div class="card-body">
+ 
+              <div class="table-responsive">
+               <div class="card-header" > <h style="color:rgba(59, 54, 54, 0.89)">
+               
+                 <table class="fixed_headers">
+                   <thead class="thead-light">
+                     <tr>
+
+                       <th scope="col" style="color:rgb(0, 0, 0)" ><strong>category</strong></th>
+                       <th scope="col"style="color:rgb(0, 0, 0)"><strong>code</strong></th>
+                       <th scope="col"style="color:rgb(0, 0, 0)"><strong>Description</strong></th>
+
+                       <th scope="col"style="color:rgb(0, 0, 0)"><strong>Supprimer</strong></th>
+                       <th scope="col"style="color:rgb(0, 0, 0)"><strong>Modifier</strong></th>
+                     </tr>
+                   </thead>
+                   <tbody>
+                    <tr *ngFor="let x of regle ">
+                      
+                      <td>{{x.category}}</td>
+                       <td>{{x.code}}</td>
+                       <td>{{x.description}}</td>
+                        <td><button (click)=deleteregle(x) class="btn btn-danger">Delete</button> </td>
+                        <td> <button class="btn btn-primary" (click)=updateregle(x)>Edit</button></td>       
+                      </tr>
+                     
+                   </tbody>
+                 </table>
+               
+               
+               
+               
+               
+               
+               </h></div>
            
-            <td><button (click)=deleteregle(x) class="btn btn-danger">Delete</button>
-              <td> <button class="btn btn-primary" (click)=updateregle(x)>Edit</button></td>            
-          </tr>
-        </tbody>
-      </table>
-    </div>
+              </div>
+          </div>
+      </div>
+  </div>
+ 
+  </div>
   </div>

@@ -19,11 +19,14 @@ export class RegleService {
     return this.http.get(`${this.baseUrl}/${id}`);
   }
 
-  createregle(regle: Object): Observable<Object> {
-    return this.http.post(`${this.baseUrladd}`, regle);
-  }
+  // createregle(regle: Regle) {
+  //   return this.http.post(`${this.baseUrladd}`, regle,{responseType:'text' as 'json'});
+  // }
 
   
+  createregle(regle: any): Observable<any> {
+    return this.http.post(this.baseUrladd, regle);
+  }
 
 
   public deleteregle(regle) {

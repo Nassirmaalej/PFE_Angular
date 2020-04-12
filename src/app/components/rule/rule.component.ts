@@ -36,18 +36,23 @@ export class RuleComponent implements OnInit {
   }
 
 
+  delay(ms: number) {
+    return new Promise( resolve => setTimeout(resolve, ms) );
+}
 
 
-
-  getevent() {
+  async getevent() {
     this.clickedEvent = true;
     this.ruleService.getevent().subscribe(data => {
     this.rule = data
       console.log(this.rule)
     });
     console.log('geting data ...');
-    
+    await this.delay(3000);
+    this.getevent();
+  
   }
+
   }
 
 
