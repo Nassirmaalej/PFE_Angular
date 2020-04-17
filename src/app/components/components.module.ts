@@ -35,7 +35,7 @@ import { AddComponent } from './add/add.component';
         NouisliderModule,
         RouterModule,
         HttpClientModule,
-        JwBootstrapSwitchNg2Module
+        JwBootstrapSwitchNg2Module,
       ],
     declarations: [
         ComponentsComponent,

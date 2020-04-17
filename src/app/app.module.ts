@@ -28,7 +28,6 @@ import { HttpInterceptorService } from './http-interceptor.service';
         ComponentsModule,
         ExamplesModule,
         jqxBarGaugeModule,
-  
         
     ],
     providers: [ {

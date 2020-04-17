@@ -40,9 +40,7 @@ export class AddComponent implements OnInit {
     this.save();    
   }
 
-  gotoList() {
-    this.router.navigate(['/crud']);
-  }
+ 
 
   }
 

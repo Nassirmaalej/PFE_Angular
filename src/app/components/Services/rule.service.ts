@@ -14,8 +14,8 @@ export class RuleService {
 
 
   private baseUrlcalculRouting='http://localhost:8081/regle/calculRouting'
-  private baseUrlcalculpreCalcul='http://localhost:8081/regle/calculRouting';
-  private baseUrlcalculParcours='http://localhost:8081/regle/calculRouting';
+  private baseUrlcalculpreCalcul='http://localhost:8081/regle/calculpreCalcul';
+  private baseUrlcalculParcours='http://localhost:8081/regle/calculParcours';
 
 
 
@@ -85,11 +85,15 @@ export class RuleService {
   private baseUrlupdateout='http://localhost:8081/regle/statupdateout';
   private baseUrlupdatesep='http://localhost:8081/regle/statupdatesep';
 
+  private Assistancecommerciale='http://localhost:8081/motif/Assistancecommerciale';
+  private Activationweb='http://localhost:8081/motif/Activationweb';
+  private Assurancemobile='http://localhost:8081/motif/Assurancemobile';
+  private Desimlockage='http://localhost:8081/motif/Desimlockage';
+  private Paiementfacture='http://localhost:8081/motif/Paiementfacture';
+  private  Informationsurlaconsommation='http://localhost:8081/motif/Informationsurlaconsommation';
+  private Choixintermédairenonvalide='http://localhost:8081/motif/Choixintermédairenonvalide';
 
-
-
-
-
+  
 
 
 
@@ -240,6 +244,21 @@ export class RuleService {
 
 
 
+  getAssistancecommerciale():Observable<any>
+  {return this.http.get(this.Assistancecommerciale)}
+
+  getActivationweb():Observable<any>
+  {return this.http.get(this.Activationweb)}
+  getAssurancemobile():Observable<any>
+  {return this.http.get(this.Assurancemobile)}
+  getDesimlockage():Observable<any>
+  {return this.http.get(this.Desimlockage)}
+  getPaiementfacture():Observable<any>
+  {return this.http.get(this.Paiementfacture)}
+  getInformationsurlaconsommation():Observable<any>
+  {return this.http.get(this.Informationsurlaconsommation)}
+  getChoixintermédairenonvalide():Observable<any>
+  {return this.http.get(this.Choixintermédairenonvalide)}
 
 
 

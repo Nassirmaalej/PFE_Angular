@@ -27,6 +27,7 @@
             ],
             "scripts": [
               "node_modules/rellax/rellax.min.js"
+         
             ]
           },
           "configurations": {
@@ -80,8 +81,8 @@
             "styles": [
               "src/styles.scss",
               "src/assets/sass/now-ui-kit.scss",
-              "src/assets/css/demo.css",
-              "node_modules/jqwidgets-ng/jqwidgets/styles/jqx.base.css"
+              "src/assets/css/demo.css"
+              
             ],
             "assets": [
               "src/assets",

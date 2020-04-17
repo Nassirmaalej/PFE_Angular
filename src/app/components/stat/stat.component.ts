@@ -2352,10 +2352,12 @@ this.clickedEvent = true;
       }
     });
   
-   
  
 
   }
+  rule(): void {
+    this.router.navigate(['rule']);
+  };
 
  }
 

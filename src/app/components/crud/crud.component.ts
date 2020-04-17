@@ -18,18 +18,18 @@ export class CrudComponent implements OnInit {
     private router: Router) {}
 
   ngOnInit() {
-    
-  }
-
-  getregle() {
     this.clickedEvent = true;
     this.regleService.getregleList().subscribe(data => {
     this.regle = data
       console.log(this.regle)
     });
     console.log('geting data ...');
-    
   }
+
+ 
+
+    
+  
 
   deleteregle(regle) {
     this.regleService.deleteregle(regle)

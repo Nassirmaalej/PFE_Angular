@@ -45,12 +45,12 @@
 
 
         &.btn-danger{
-            color: $danger-color;
+            color: "#F30606";
 
             &:hover,
             &:focus,
             &:active{
-                color: $danger-states-color;
+                color: "#F30606";
             }
         }
 

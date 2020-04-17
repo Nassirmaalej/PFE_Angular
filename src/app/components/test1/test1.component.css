@@ -1,34 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Merriweather');
-html {
-  font-family: 'Merriweather', serif;
-  font-size: 14px;
+#sailorTableArea{
+    max-height: 300px;
+    overflow-x: auto;
+    overflow-y: auto;
 }
-body {
-  padding: 5px 10px;
+#sailorTable{
+    white-space: normal;
 }
-
-svg {
-  display: block;
-  width: 100%;
+tbody {
+    display:block;
+    height:200px;
+    overflow:auto;
 }
-#states *.on {
-  fill: red;
-}
-
-.list-of-states {
-  margin: 0;
-  padding: 0;
-  columns: 100px auto;
-  column-gap: 8px;
-  list-style: none;
-}
-.list-of-states li {
-  padding: 2px 4px;
-  display: inline-block;
-  width: 100%;
-}
-.list-of-states li.on {
-  background: red;
-  color: white;
-  font-weight: bold;
+thead, tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;
 }

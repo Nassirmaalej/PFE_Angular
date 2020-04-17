@@ -25,7 +25,7 @@ export class StatruleComponent  {
   connect : any;
   url = 'http://localhost:8081/regle/listrule';  
   data: rule[];  
-  date = [];  
+  date = ["Parcours","Routing"];  
   Run = [1,1,200,2,3,3,3,3,3,3,3,3,3];  
   Linechart = [];  
   myChart=[] ;
@@ -48,7 +48,7 @@ export class StatruleComponent  {
     this.clickedEvent = true;
     this.ruleService1.getcalculRouting().subscribe(data => {
     this.calculRouting= data
-    console.log('geting  (number of routing)...');
+    console.log('geting  (number of Routing)...');
       console.log(this.calculRouting)
     });
 
@@ -63,7 +63,7 @@ export class StatruleComponent  {
     this.ruleService1.getcalculpreCalcul().subscribe(data => {
     this.calculpreCalcul= data
     console.log('geting  (number of preCalcul)...');
-      console.log(this.calculParcours)  
+      console.log(this.calculpreCalcul)  
     });
 
 
@@ -107,7 +107,7 @@ export class StatruleComponent  {
 
     this.clickedEvent = true;
     this.ruleService1.getstatroutingupdate().subscribe(data => {
-    this.statroutingdelete= data
+    this.statroutingupdate= data
     console.log('geting  (number of statroutingupdate)...');
       console.log(this.statroutingdelete)
     });
@@ -213,6 +213,50 @@ export class StatruleComponent  {
         }
       }
     });
+
+
+    
+    var ctx = document.getElementById("myBarChart1");
+    var myLineChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ["PreCalcul", "Parcours", "Routing"],
+        datasets: [{
+          label: "number",
+          backgroundColor: "#0195FC",
+          borderColor: "rgba(2,117,216,1)",
+          data: [this.statpreCalculupdate, this.statParcoursupdate,this.statroutingupdate]
+        }],
+      },
+      options: {
+        scales: {
+          xAxes: [{
+            time: {
+              unit: 'month'
+            },
+            gridLines: {
+              display: false
+            },
+            ticks: {
+              maxTicksLimit: 6
+            }
+          }],
+          yAxes: [{
+            ticks: {
+              min: 0,
+              max: 25,
+              maxTicksLimit: 5
+            },
+            gridLines: {
+              display: true
+            }
+          }],
+        },
+        legend: {
+          display: false
+        }
+      }
+    });
     
 
 
@@ -222,20 +266,20 @@ export class StatruleComponent  {
     var myLineChart = new Chart(ctx, {
       type: 'line',
       data: {
-        labels: ["Mar 1", "Mar 2", "Mar 3", "Mar 4", "Mar 5", "Mar 6", "Mar 7", "Mar 8", "Mar 9", "Mar 10", "Mar 11", "Mar 12", "Mar 13"],
+        labels: ["Routing", "Parcours", "PreCalcul"],
         datasets: [{
           label: "Sessions",
           lineTension: 0.3,
-          backgroundColor: "#FA9CD3",
-          borderColor: "#CB0075",
+          backgroundColor: "#CEFEF5",
+          borderColor: "#06D4AD",
           pointRadius: 5,
-          pointBackgroundColor: "#CB0075",
-          pointBorderColor: "#CB0075",
+          pointBackgroundColor: "#06D4AD",
+          pointBorderColor: "#06D4AD",
           pointHoverRadius: 5,
           pointHoverBackgroundColor: "rgba(2,117,216,1)",
           pointHitRadius: 50,
           pointBorderWidth: 2,
-          data: [10000, 30162, 26263, 18394, 18287, 28682, 31274, 33259, 25849, 24159, 32651, 31984, 38451],
+          data:  [this.calculRouting,this.calculParcours, this.calculpreCalcul] ,
         }],
       },
       options: {
@@ -254,7 +298,7 @@ export class StatruleComponent  {
           yAxes: [{
             ticks: {
               min: 0,
-              max: 40000,
+              max: 10,
               maxTicksLimit: 5
             },
             gridLines: {
@@ -268,7 +312,25 @@ export class StatruleComponent  {
       }
     });
 
-
+    var ctx = document.getElementById('myChartnchalah');
+    var chart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'line',
+    
+        // The data for our dataset
+        data: {
+            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+            datasets: [{
+                label: 'My First dataset',
+                backgroundColor: 'rgb(255, 99, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: [0, 10, 5, 2, 20, 30, 45]
+            }]
+        },
+    
+        // Configuration options go here
+        options: {}
+    });
 
 
 

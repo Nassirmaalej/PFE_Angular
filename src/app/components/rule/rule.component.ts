@@ -20,9 +20,25 @@ export class RuleComponent implements OnInit {
   constructor(private ruleService: RuleService,
     private router: Router) { }
   public isCollapsed = true;
-  ngOnInit() {
 
-  }
+  
+  public data = [
+    {name: 'test', email: 'test@gmail.com', website:'test.com'},
+    {name: 'test', email: 'test@gmail.com', website:'test.com'},
+    {name: 'test', email: 'test@gmail.com', website:'test.com'},
+    {name: 'test', email: 'test@gmail.com', website:'test.com'},];
+    title = 'angulardatatables';
+    dtOptions: any = {};
+  ngOnInit() {
+    this.dtOptions = {
+      pagingType: 'full_numbers',
+      pageLength: 3,
+      processing: true,
+      dom: 'Bfrtip',
+        buttons: ['copy', 'csv', 'excel', 'print']
+
+
+  } } ;
 
 
   getconnect(){

@@ -42,6 +42,7 @@ const routes: Routes =[
     { path: 'add',                component: AddComponent },
 
 ];
+export const routing = RouterModule.forRoot(routes);
 
 @NgModule({
     imports: [

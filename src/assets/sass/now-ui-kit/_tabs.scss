@@ -8,10 +8,10 @@
         > .nav-link{
             color: $default-color;
             margin: 0;
-            margin-right: 5px;
+            margin-right: 25px;
             background-color: $transparent-bg;
             border: 1px solid $transparent-bg;
-            border-radius: 30px;
+            border-radius: 90px;
             font-size: $font-size-base;
             padding: $padding-btn-vertical $padding-round-horizontal;
             line-height: $line-height-general;
@@ -22,11 +22,11 @@
 
             &.active{
                 border: 1px solid $default-color;
-                border-radius: 30px;
+                border-radius: 300px;
             }
 
             i.now-ui-icons{
-                font-size: 14px;
+                font-size: 140px;
                 position: relative;
                 top: 1px;
                 margin-right: 3px;
@@ -35,7 +35,7 @@
 
         &.disabled > .nav-link,
         &.disabled > .nav-link:hover {
-            color: rgba(255,255,255,0.5);
+            color: rgba(24, 21, 21, 0.5);
         }
     }
 
@@ -108,15 +108,15 @@
     }
 
 }
-[data-tabs-color="orange"]{
+[data-tabs-color="blue"]{
   .nav-tabs{
-    background-color: $primary-color;
+    background-color: $info-color;
 
     .nav-item .nav-link{
-        color: $white-color;
+        color: rgb(0, 0, 0);
         &.active{
           box-shadow: none;
-          border-color: rgba(255, 255, 255, 0.5);
+          border-color: rgb(0, 0, 0);
         }
     }
   }

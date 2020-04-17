@@ -71,6 +71,24 @@
 
 
 
+#sailorTableArea{
+    max-height: 400px;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+#sailorTable{
+    white-space: normal;
+}
+tbody {
+    display:block;
+    height:800px;
+    overflow:auto;
+}
+thead, tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;
+}
 
 
 

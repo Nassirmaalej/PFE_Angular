@@ -13,9 +13,9 @@
         </a>
          <div ngbDropdownMenu>
          
-           <a class="dropdown-item" href="/statrule"   ><strong style="color:rgba(226, 130, 21, 0.87);"  >DASHBOARD DE LA TABLE RULE </strong></a>
-           <a class="dropdown-item" href="#">Another action</a>
-           <a class="dropdown-item" href="#">Something else here</a>
+           <a class="dropdown-item" [routerLink]="['/statrule']"    ><strong style="color:rgba(226, 130, 21, 0.87);"  >DASHBOARD DE LA TABLE RULE </strong></a>
+           <a class="dropdown-item" [routerLink]="['/test']"    ><strong style="color:rgba(226, 130, 21, 0.87);"  >MAP </strong></a>
+           <a class="dropdown-item" href="#">LOGIN PAGE</a>
            <div class="dropdown-divider"></div>
            <a class="dropdown-item" href="#">Separated link</a>
            <div class="dropdown-divider"></div>
@@ -24,8 +24,10 @@
        </div>
     </div>
       <div class="navbar-translate">
-          <a class="navbar-brand" [routerLink]="['/index']" placement="bottom" ngbTooltip="Designed by Invision. Coded by Creative Tim"   >
-              PLUS 
+          <a class="navbar-brand" [routerLink]="['/index']" 
+          placement="bottom" ngbTooltip="Designed by Invision. Coded by Creative Tim"   >
+          <i class="now-ui-icons arrows-1_share-66"></i>
+          <p><strong>  PLUS </strong>    </p>
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" (click)="sidebarToggle()">
               <span class="navbar-toggler-bar bar1"></span>
@@ -37,29 +39,31 @@
           <ul class="navbar-nav ml-auto">
         
             <li class="nav-item">
-              <a class="nav-link" href="/rule" >
-                <i class="now-ui-icons files_paper"></i>
-                <p><strong>EVENEMENTS</strong></p>
+              <a class="nav-link" [routerLink]="['/rule']"  >
+                <i _ngcontent-dka-c129="" class="now-ui-icons objects_globe"></i>                <p><strong>EVENEMENTS</strong></p>
+                
               </a>
           </li>
 
               <li class="nav-item">
-                  <a class="nav-link" href="/stat" >
+                  <a class="nav-link" [routerLink]="['/stat']" >
                     <i class="now-ui-icons files_paper"></i>
                     <p><strong>Statistique</strong></p>
                   </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/crud" >
-                  <i class="now-ui-icons files_paper"></i>
-                  <p><strong>Gestion des regles</strong></p>
+             <li class="nav-item">
+                <a class="nav-link"  [routerLink]="['/crud']">
+                  <i _ngcontent-dka-c129="" class="now-ui-icons ui-1_settings-gear-63"></i>                  <p><strong>Gestion des regles</strong></p>
                 </a>
-            </li>
-        
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link"  [routerLink]="['/']">
+&nbsp; &nbsp;              
+              </a>
+          </li> 
               <li class="nav-item">
-                  <a class="nav-link btn btn-neutral" href="/login" >
-                   <i class="now-ui-icons arrows-1_share-66"></i>
-                    <strong><p>QUITTER</p></strong> 
+                  <a  [routerLink]="['/login']" >
+                    <strong _ngcontent-ulo-c128="" type="button" class="btn btn-primary btn-round">  <i class="now-ui-icons arrows-1_share-66"></i>QUITTER</strong> 
                   </a>
               </li>
              

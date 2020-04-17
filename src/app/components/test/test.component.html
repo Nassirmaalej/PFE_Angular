@@ -6,13 +6,20 @@
 <link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Teko:400,700" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <div class="wrapper">
-  
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+ 
 
   <div class="page-header page-header-small">
-      <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('https://www.cifinancial.com/sites/default/files/graph.jpg');" >
+      <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('https://www.einfochips.com/blog/wp-content/uploads/2019/08/speeding-up-deep-learning-inference-on-edge-devices-featured.jpg');" >
 
       </div>
 
@@ -34,20 +41,85 @@
       <div class="container">
           <div class="row">
               <div class="col-md-8 ml-auto mr-auto text-center">
-                  <h2 class="title">      &nbsp;&nbsp; <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> <strong style="color:rgba(226, 86, 21, 0.87);" >  Number of events :</strong>  {{this.rulex + this.ruley + this. rulez}} 
-                  </h2>
+                  
               </div>
           </div>
         
 
 <br>
+
+
+<div class="row">
+  <div class="col-md-5">
+    <div class="card ">
+      <div class="stats">
+            
+      </div>
+     
+      <div class="card-body ">
+        <div class="card-body"><div class="card-body">
+          <img class="d-block" src="assets/img/flags/a.png" alt="First slide" >
+
+        </div>
+    </div>
+      </div>
+      <div class="card-footer ">
+ 
+        <hr>
+      
+      </div>
+    </div>
+  </div>
+  <div class="col-md-7">
+    <div class="card card-chart">
+      <div class="card-header">
+        <h5 class="card-title">Courbe détaillé </h5>
+        <p style="color:rgba(0, 158, 79, 0.87);"><strong>Courbe des Evenements </strong></p>
+      </div>
+      <div class="card-body">
+        <canvas id="bar-chart-horizontal" width="800" height="450"></canvas>          </div>
+      <div class="card-footer">
+      
+        <hr/>
        
-<div class="card-body"><canvas id="myChart" width="50%" height="10"></canvas></div>
-<div class="card-body"><canvas id="myRadarChart" width="50%" height="30"></canvas></div>
+      </div>
+    </div>
+  </div>
+</div>
 
-         
-<div class="card-body"><canvas id="horizontalBar" width="50%" height="30"></canvas></div>
 
+
+  <main>
+    <div class="container-fluid">
+
+        
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card mb-4">
+                    <div class="card-header"><i class="fas fa-chart-bar mr-1"></i><strong> Bar Chart</strong>   </div>
+                    <div class="card-body">                        <canvas id="myChart" width="30%" height="30"></canvas>
+
+                    </div>
+                    <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="card mb-6">
+                  <div class="card-header"><i class="fas fa-chart-bar mr-1"></i><strong> Bar Chart</strong>   </div>
+
+                        <canvas id="radar-chart" width="800" height="900"></canvas>
+
+                  <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+  
+
+</main>
 
   <footer class="footer footer-default">
       <div class="container">
