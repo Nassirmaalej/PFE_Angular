@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { RegleService } from '../Services/regle.service';
 import { Router } from '@angular/router';
 import { Regle } from '../Services/regle';
-
 @Component({
-  selector: 'app-add',
-  templateUrl: './add.component.html',
-  styleUrls: ['./add.component.css']
+  selector: 'app-edit',
+  templateUrl: './edit.component.html',
+  styleUrls: ['./edit.component.css']
 })
-export class AddComponent implements OnInit {
+export class EditComponent implements OnInit {
+
   regle: Regle = new Regle();
   submitted = false;
   constructor( private regleService: RegleService , private router: Router ) { }
@@ -17,7 +17,6 @@ export class AddComponent implements OnInit {
 
     this.regle=this.regleService.getter()
     console.log(this.regle)
-    this.regle = new Regle();
 
   }
 
@@ -31,35 +30,16 @@ export class AddComponent implements OnInit {
     this.regleService.createregle(this.regle)
       .subscribe(data => console.log(data), error => console.log(error));
     this.regle = new Regle();
-   
-
     this.router.navigate(['/crud']);
 
-    console.log(this.regle)  
+    
   }
 
   onSubmit() {
-    this.save();  
-    console.log(this.regle)  ;
-    this.router.navigate(['/rule']);
-
+    this.save();    
   }
 
  
 
-  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}

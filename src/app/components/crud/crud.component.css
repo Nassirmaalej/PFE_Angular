@@ -13,6 +13,11 @@
   border-radius:100px;
   z-index:1
 }
+   
+.page-header-small{
+  min-height: 15vh;
+  max-height: 15px;
+}
 .intro-banner-vdo-play-btn i{
   line-height:6px;
   font-size:30px
@@ -145,6 +150,6 @@ thead, tbody tr {
   }
   
   .form-line{
-    border-right: 1px solid #B29999;
+    border-right: 1px solid rgb(235, 67, 67);
   }
   

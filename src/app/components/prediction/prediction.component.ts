@@ -4,34 +4,34 @@ import { Router } from '@angular/router';
 import { Prediction } from '../Services/prediction';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { ProtractorExpectedConditions } from 'protractor';
-
 @Component({
-  selector: 'test1',
-  templateUrl: './test1.component.html',
-  styleUrls: ['./test1.component.css'],
+  selector: 'app-prediction',
+  templateUrl: './prediction.component.html',
+  styleUrls: ['./prediction.component.css']
 })
+export class PredictionComponent implements OnInit {
 
-export class Test1Component implements OnInit  {
-  
+
   clickedEvent = false;
   connect: any;
   submitted: boolean;
   private baseUrl = 'http://127.0.0.1:12345/predict';
   private baseUrl1 = 'http://localhost:8081/client';
 
-  predict1:Prediction;
-  result: string;
   predict: Prediction;
+  result: string;
 
     constructor(private predictionservice: PredictionService,private http: HttpClient,
     private router: Router) { }
 
     ngOnInit(): void {
-     this.predict= new Prediction()
+
+     
+      this.predict = new Prediction();
+ 
     }
 
-    getClient(id: number): Observable<any> {
+    getClient(id: number): Observable<Object> {
       return this.http.get(`${this.baseUrl1}/${id}`);
     }
 
@@ -39,9 +39,9 @@ export class Test1Component implements OnInit  {
     getData(id)  
     {  
         this.getClient(id).subscribe(  data => {
-          this.predict = data
+          this.connect = data
           
-            console.log(this.predict)
+            console.log(this.connect)
           },  
           error => {  
             console.log("error while getting user Details");  
@@ -64,40 +64,23 @@ export class Test1Component implements OnInit  {
     
     
     save() {
-      console.log("predict",this.predict)
-console.log(this.predict.anciente)
+      console.log(this.predict)
 
-      this.http.post(this.baseUrl,[
-    
-        {"Site":this.predict.site , "Anciente": this.predict.anciente, "Age": this.predict.age}
-      
-    ])
-      .subscribe(data => { 
+      this.http.post(this.baseUrl,[this.predict])
+        .subscribe(data => { 
 
-        this.result = JSON.stringify(data);
-          console.log(this.result)
-        });
-
-         
-
-
-         
-
-
- 
-
-         
-
-
+          this.result = JSON.stringify(data);
+            console.log(this.result)
+          });
      
       
     }
   
     onSubmit() {
       this.save();    
-
+     
+    
 
     }
   
-
 }

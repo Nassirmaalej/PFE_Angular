@@ -136,7 +136,7 @@ export class StatruleComponent  {
 
           datasets: [  
             {  
-              data: [this.calculRouting,this.calculParcours, this.calculpreCalcul] ,
+              data: [5,6, 9] ,
               borderColor: '#3cb371',  
                backgroundColor: [  
                 "#00FFEC",  
@@ -181,7 +181,7 @@ export class StatruleComponent  {
           label: "number",
           backgroundColor: "#FB130C",
           borderColor: "rgba(2,117,216,1)",
-          data: [this.statpreCalculdelete, this.statParcoursdelete,this.statroutingdelete]
+          data: [5,6,9]
         }],
       },
       options: {
@@ -279,7 +279,7 @@ export class StatruleComponent  {
           pointHoverBackgroundColor: "rgba(2,117,216,1)",
           pointHitRadius: 50,
           pointBorderWidth: 2,
-          data:  [this.calculRouting,this.calculParcours, this.calculpreCalcul] ,
+          data:  [9,4,8] ,
         }],
       },
       options: {

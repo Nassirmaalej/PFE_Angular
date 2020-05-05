@@ -3,6 +3,8 @@ import { Observable } from 'rxjs';
 import { rule } from '../Services/rule';
 import { Router } from '@angular/router';
 import { RuleService } from "../Services/rule.service";
+import * as XLSX from 'xlsx'; 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -20,7 +22,7 @@ export class RuleComponent implements OnInit {
   constructor(private ruleService: RuleService,
     private router: Router) { }
   public isCollapsed = true;
-
+public rule1=[];
   
   public data = [
     {name: 'test', email: 'test@gmail.com', website:'test.com'},
@@ -30,15 +32,29 @@ export class RuleComponent implements OnInit {
     title = 'angulardatatables';
     dtOptions: any = {};
   ngOnInit() {
+    this.clickedEvent = true;
+    this.ruleService.getevent().subscribe(data => {
+    this.rule = data
+      console.log(this.rule)
+    });
+    console.log('geting data ...');
+  
+  
+
+
+
+
     this.dtOptions = {
       pagingType: 'full_numbers',
       pageLength: 3,
       processing: true,
       dom: 'Bfrtip',
-        buttons: ['copy', 'csv', 'excel', 'print']
+        buttons: [
+            'copy', 'csv', 'excel', 'print'
+        ]
+    };
 
-
-  } } ;
+  } ;
 
 
   getconnect(){
@@ -68,6 +84,22 @@ export class RuleComponent implements OnInit {
     this.getevent();
   
   }
+  fileName= 'ExcelSheet.xlsx';  
+
+  exportexcel(): void 
+    {
+       /* table id is passed over here */   
+       let element = document.getElementById('excel-table'); 
+       const ws: XLSX.WorkSheet =XLSX.utils.table_to_sheet(element);
+
+       /* generate workbook and add the worksheet */
+       const wb: XLSX.WorkBook = XLSX.utils.book_new();
+       XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
+
+       /* save to file */
+       XLSX.writeFile(wb, this.fileName);
+			
+    }
 
   }
 

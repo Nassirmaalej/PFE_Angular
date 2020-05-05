@@ -2,6 +2,15 @@
     background-color: #ed184f!important;
     background-image: linear-gradient(90deg, #fd5581, #fd8b55);
   }
+    
+.moncercle{
+    background:#bfd70e;
+    border-radius:50%;
+    width:160px;
+    height:160px;
+    border:2px solid #679403; 
+  }
+  
   .intro-banner-vdo-play-btn{
     height:px;
     width:px;
@@ -116,15 +125,7 @@ nav > div a.nav-item.nav-link:focus
   
   
   
-  
-#moncercle{
-    background:#bfd70e;
-    border-radius:50%;
-    width:160px;
-    height:160px;
-    border:2px solid #679403; 
-  }
-  
+
   
   
   

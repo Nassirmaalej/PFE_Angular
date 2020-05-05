@@ -12,6 +12,7 @@ export class RegleService {
   private baseUrl1= 'http://localhost:8081/regle/update';
   private baseUrldelte ='http://localhost:8081/regle/delete'
   private baseUrladd='http://localhost:8081/regle/add';
+  baseUrlPrediction='http://localhost:12345/predict';
   private  regle: Regle ;
   constructor(private http: HttpClient) { }
 
@@ -22,6 +23,13 @@ export class RegleService {
   // createregle(regle: Regle) {
   //   return this.http.post(`${this.baseUrladd}`, regle,{responseType:'text' as 'json'});
   // }
+
+  prediction(predict: any): Observable<any> {
+    return this.http.post(this.baseUrlPrediction,predict);
+  }
+
+
+
 
   
   createregle(regle: any): Observable<any> {

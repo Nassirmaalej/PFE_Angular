@@ -19,6 +19,10 @@ import { StatruleComponent } from './components/statrule/statrule.component';
 import { CrudComponent } from './components/crud/crud.component';
 import { AddruleComponent } from './components/addrule/addrule.component';
 import { AddComponent } from './components/add/add.component';
+import {EditComponent } from './components/edit/edit.component';
+import {PredictionComponent } from './components/prediction/prediction.component';
+import { Test2Component } from './components/test2/test2.component';
+import { Test3Component } from './test3/test3.component';
 
 const routes: Routes =[
     { path: 'index',                component: ComponentsComponent },
@@ -38,8 +42,12 @@ const routes: Routes =[
     { path: 'stat1',                component: Stat1Component },
     { path: 'statrule',                component: StatruleComponent },
     { path: 'crud',                component: CrudComponent },
-    { path: 'edit',                component: AddruleComponent },
     { path: 'add',                component: AddComponent },
+    { path: 'edit',                component: EditComponent },
+    { path: 'prediction',                component: PredictionComponent },
+    { path: 'test2',                component: Test2Component },
+    { path: 'test3',                component: Test3Component },
+
 
 ];
 export const routing = RouterModule.forRoot(routes);

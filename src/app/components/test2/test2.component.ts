@@ -1,19 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { PredictionService } from '../Services/prediction.service';
-import { Router } from '@angular/router';
 import { Prediction } from '../Services/prediction';
-import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
+import { PredictionService } from '../Services/prediction.service';
 import { HttpClient } from '@angular/common/http';
-import { ProtractorExpectedConditions } from 'protractor';
+import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'test1',
-  templateUrl: './test1.component.html',
-  styleUrls: ['./test1.component.css'],
+  selector: 'app-test2',
+  templateUrl: './test2.component.html',
+  styleUrls: ['./test2.component.css']
 })
+export class Test2Component   {
 
-export class Test1Component implements OnInit  {
-  
+ 
+
+
   clickedEvent = false;
   connect: any;
   submitted: boolean;
@@ -78,18 +79,7 @@ console.log(this.predict.anciente)
           console.log(this.result)
         });
 
-         
 
-
-         
-
-
- 
-
-         
-
-
-     
       
     }
   
@@ -98,6 +88,14 @@ console.log(this.predict.anciente)
 
 
     }
-  
+
+
+  private toggleText: string = "Hide";
+  private show: boolean = false;
+
+  public onToggle(): void {
+      this.show = !this.show;
+      this.toggleText = this.show ? "Hidе" : "Show";
+  }
 
 }

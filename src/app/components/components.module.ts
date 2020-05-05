@@ -26,6 +26,12 @@ import { StatruleComponent } from './statrule/statrule.component';
 import { CrudComponent } from './crud/crud.component';
 import { AddruleComponent } from './addrule/addrule.component';
 import { AddComponent } from './add/add.component';
+import { EditComponent } from './edit/edit.component';
+import {DataTablesModule} from 'angular-datatables';
+import { PredictionComponent } from './prediction/prediction.component';
+import { Test2Component } from './test2/test2.component';
+import { MenuComponent } from './menu/menu.component';
+
 
 @NgModule({
     imports: [
@@ -36,6 +42,7 @@ import { AddComponent } from './add/add.component';
         RouterModule,
         HttpClientModule,
         JwBootstrapSwitchNg2Module,
+        DataTablesModule
       ],
     declarations: [
         ComponentsComponent,
@@ -64,6 +71,15 @@ import { AddComponent } from './add/add.component';
         AddruleComponent,
         
         AddComponent,
+        
+        EditComponent,
+        
+        PredictionComponent,
+        
+        Test2Component,
+        
+        MenuComponent,
+        
         
         
     ],
