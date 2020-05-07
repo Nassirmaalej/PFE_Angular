@@ -34,7 +34,7 @@
       <div class="container">
           <div class="row">
               <div class="col-md-8 ml-auto mr-auto text-center">
-                  <h2 class="title">      &nbsp;&nbsp; <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> <strong style="color:rgba(226, 86, 21, 0.87);" >  Number of events :</strong>  {{this.rulex + this.ruley + this. rulez}} 
+                  <h2 class="title">      &nbsp;&nbsp; <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> <strong style="color:rgba(226, 86, 21, 0.87);" >  Nombre des Evenements :</strong>  {{this.rulex + this.ruley + this. rulez}} 
                   </h2>
               </div>
           </div>
@@ -60,9 +60,9 @@
                 <div class="card-footer ">
                   <div class="legend">
                    
-                    <i class="fa fa-circle text-warning"></i> Updated
-                    <i class="fa fa-circle text-danger"></i> Whrited
-                    <i class="fa fa-circle text-info"></i> Delted
+                    <i class="fa fa-circle text-warning"></i> Modifier
+                    <i class="fa fa-circle text-danger"></i> Ajouter
+                    <i class="fa fa-circle text-info"></i> Supprimer
                   </div>
                   <hr>
                 
@@ -80,13 +80,14 @@
                 </div>
                 <div class="card-footer">
                   <div class="chart-legend">
-                    <i class="fa fa-circle text-info"></i> Delted
-                    <i class="fa fa-circle text-danger"></i> Whrited
-                    <i class="fa fa-circle text-warning"> </i> Updated
+                    <i class="fa fa-circle text-warning"></i> Modifier
+                    <i class="fa fa-circle text-danger"></i> Ajouter
+                    <i class="fa fa-circle text-info"></i> Supprimer
                   </div>
                   <hr/>
                   <div class="card-stats">
-                    <i class="fa fa-check"></i> Data information certified
+                    <i class="fa fa-check"></i> Informations sur les données certifiées
+
                   </div>
                 </div>
               </div>
@@ -99,16 +100,9 @@
             <div id="layoutSidenav_content">
 
 
-              <div class="card mb-4">
-
-                                
-                <div class="card-header"><i class="fas fa-chart-area mr-1"></i><strong> Courbe de progression </strong>  </div>
-                <div class="card-body"><canvas id="myAreaChart" width="100%" height="20"></canvas></div>
-                <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
-            
-
-            </div>
+             
         </div>
+        <br>
                 <main>
                     <div class="container-fluid">
              
@@ -116,7 +110,7 @@
                         <div class="row">
                             <div class="col-lg-7">
                                 <div class="card mb-4">
-                                    <div class="card-header"><i class="fas fa-chart-bar mr-1"></i><strong> Bar Chart</strong>   </div>
+                                    <div class="card-header"><i class="fas fa-chart-bar mr-1"></i><strong style="color:rgba(226, 86, 21, 0.87);"> Histogramme</strong>   </div>
                                     <div class="card-body"><canvas id="myBarChart" width="100%" height="50"></canvas></div>
                                     <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
                                 </div>
@@ -125,25 +119,15 @@
                                 <div class="card mb-4">
 
                                 
-                                  <p _ngcontent-jur-c130="" class="blockquote blockquote-primary"> "I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at." <br _ngcontent-jur-c130=""><br _ngcontent-jur-c130=""><small _ngcontent-jur-c130=""> - Noaa </small></p>
+                                  <p _ngcontent-jur-c130="" class="blockquote blockquote-primary">Tous les données et les courbes se changent en temps reéls.  <br _ngcontent-jur-c130=""><br _ngcontent-jur-c130=""><small _ngcontent-jur-c130=""> <strong>Vous pouver télécharger la page en format PDF</strong>  <br>                    <strong _ngcontent-ulo-c128="" type="button" class="btn btn-primary btn-round">  <i class="now-ui-icons arrows-1_share-66"></i>TELECHARGER</strong> 
+                                  </small></p>
 
                                 </div>
                             </div>
                         </div>
                     </div>
                 </main>
-                <footer class="py-4 bg-light mt-auto">
-                    <div class="container-fluid">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2019</div>
-                            <div>
-                                <a href="#">Privacy Policy</a>
-                                &middot;
-                                <a href="#">Terms &amp; Conditions</a>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
+      
             </div>
           </div>
           
@@ -178,8 +162,8 @@
           <div class="copyright">
               &copy;
               {{data | date: 'yyyy'}}, Designed by
-              <a href="https://www.invisionapp.com" target="_blank">Invision</a>. Coded by
-              <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+              <a href="https://www.invisionapp.com" target="_blank">Nassir</a>. Coded by
+              <a href="https://www.creative-tim.com" target="_blank"> <strong style="color:rgba(226, 86, 21, 0.87);">MAALEJ Nassir</strong></a>.
           </div>
       </div>
   </footer>

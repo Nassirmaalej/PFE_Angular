@@ -92,7 +92,7 @@
                             </div>
                         </div>
                         </form>
-                        <button type="submit" class="btn btn-success" (click)="save()"><i class="fa fa-paper-plane" aria-hidden="true"></i>  evoyer  &nbsp;</button>
+                        <button type="submit" class="btn btn-success" (click)="save()"><i class="fa fa-paper-plane" aria-hidden="true"></i>  envoyer  &nbsp;</button>
 
                     </div>
                 </div>
@@ -101,29 +101,20 @@
             <div class="col-md-6">
                 <div class="card"> 
                     <div class="card-body">
-                        <h2 class="card-title">Connecter pour obtenir les predictions</h2>
-                        <div class="form-group">
-                            <label for="password" class="col-form-label">Pasword</label>
-                            <input type="password" class="form-control" id="password" placeholder="Type your password" required>
-                            <div class="password-feedback">
-                            
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="password_conf" class="col-form-label">Pasword (confirm)</label>
-                            <input type="password" class="form-control" id="password_conf" placeholder="Type your password again" required>
-                            <div class="password_conf-feedback">
-                            
-                            </div>
-                        </div>
+                       
+                      
                         <div class="example-config">
-                            <button #anchor (click)="onToggle()" class="k-button"   class="btn btn-primary btn-lg"         >{{toggleText}} PREDICTION</button>
+                            <button #anchor (click)="onToggle()" class="k-button"   class="btn btn-primary btn-lg"         >PREDICTION</button>
                           </div>
                           <br>
                           <kendo-popup [anchor]="anchor" (anchorViewportLeave)="show = false" *ngIf="show">
                               <div class='content'>
                                   <!-- User-defined content -->
-                              <strong>Prediction : Desimlockage  avec un taux d'erreur 0.8745</strong>    
+                              <strong>Prediction : Desimlockage  avec un taux d'erreur 0.8745</strong>   
+                              <br>
+                              <br>
+                              <button type="submit" class="btn btn-success" ><i class="fa fa-paper-plane" aria-hidden="true"></i>  envoyer  &nbsp;</button>
+ 
                               </div>
                           </kendo-popup>
                     </div>

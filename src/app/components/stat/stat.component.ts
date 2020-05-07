@@ -511,7 +511,7 @@ getx() {    this.clickedEvent = true;
       labels: ["January", "February", "March", "April", "May", "June"],
       datasets: [{
         label: "number",
-        backgroundColor: "rgb(81, 202, 207)",
+        backgroundColor: "rgb(250, 54, 10 )",
         borderColor: "rgba(2,117,216,1)",
         data: [this.rulejan, this.rulefev, this.rulemar, this.ruleavr, this.rulemai, this.rulejui]
       }],
