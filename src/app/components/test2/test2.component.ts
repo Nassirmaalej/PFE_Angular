@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { PredictionService } from '../Services/prediction.service';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-test2',
@@ -24,13 +25,52 @@ export class Test2Component   {
   predict1:Prediction;
   result: string;
   predict: Prediction;
+  closeResult: string;
+  
 
-    constructor(private predictionservice: PredictionService,private http: HttpClient,
+    constructor(private predictionservice: PredictionService,private http: HttpClient,private modalService: NgbModal,
     private router: Router) { }
 
     ngOnInit(): void {
      this.predict= new Prediction()
     }
+
+
+
+
+
+
+
+
+    open(content) {
+      this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+        this.closeResult = `Saved with: ${result}`;
+      }, (reason) => {
+        this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+      });
+    }
+  
+    private getDismissReason(reason: any): string {
+      if (reason === ModalDismissReasons.ESC) {
+        return 'by pressing ESC';
+      } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+        return 'by clicking on a backdrop';
+      } else {
+        return `with: ${reason}`;
+      }
+    }
+  
+      
+
+
+
+
+
+
+
+
+
+
 
     getClient(id: number): Observable<any> {
       return this.http.get(`${this.baseUrl1}/${id}`);

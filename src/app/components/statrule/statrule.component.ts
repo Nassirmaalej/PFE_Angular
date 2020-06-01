@@ -128,6 +128,127 @@ export class StatruleComponent  {
       
       });  
       console.log(this.date);
+
+
+
+      var ctx = document.getElementById("myBarChart1");
+      var myLineChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ["PreCalcul", "Parcours", "Routing"],
+          datasets: [{
+            label: "number",
+            backgroundColor: "#0195FC",
+            borderColor: "rgba(2,117,216,1)",
+            data: [this.statpreCalculupdate, this.statParcoursupdate,this.statroutingupdate]
+          }],
+        },
+        options: {
+          scales: {
+            xAxes: [{
+              time: {
+                unit: 'month'
+              },
+              gridLines: {
+                display: false
+              },
+              ticks: {
+                maxTicksLimit: 6
+              }
+            }],
+            yAxes: [{
+              ticks: {
+                min: 0,
+                max: 25,
+                maxTicksLimit: 5
+              },
+              gridLines: {
+                display: true
+              }
+            }],
+          },
+          legend: {
+            display: false
+          }
+        }
+      });
+      
+  
+
+
+
+
+
+
+
+
+
+
+
+
+      var ctx = document.getElementById("myAreaChart1");
+      var myLineChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ["Routing", "Parcours", "PreCalcul"],
+          datasets: [{
+            label: "Sessions",
+            lineTension: 0.3,
+            backgroundColor: "#CEFEF5",
+            borderColor: "#06D4AD",
+            pointRadius: 5,
+            pointBackgroundColor: "#06D4AD",
+            pointBorderColor: "#06D4AD",
+            pointHoverRadius: 5,
+            pointHoverBackgroundColor: "rgba(2,117,216,1)",
+            pointHitRadius: 50,
+            pointBorderWidth: 2,
+            data:  [this.calculRouting,this.calculParcours,this.calculpreCalcul] ,
+          }],
+        },
+        options: {
+          scales: {
+            xAxes: [{
+              time: {
+                unit: 'date'
+              },
+              gridLines: {
+                display: false
+              },
+              ticks: {
+                maxTicksLimit: 7
+              }
+            }],
+            yAxes: [{
+              ticks: {
+                min: 0,
+                max: 10,
+                maxTicksLimit: 5
+              },
+              gridLines: {
+                color: "rgba(0, 0, 0, .125)",
+              }
+            }],
+          },
+          legend: {
+            display: false
+          }
+        }
+      });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       this.Linechart = new Chart('canvas', {  
         type: 'doughnut',  
         data: {  
@@ -136,7 +257,7 @@ export class StatruleComponent  {
 
           datasets: [  
             {  
-              data: [5,6, 9] ,
+              data: [this.calculRouting,this.calculParcours,this.calculpreCalcul] ,
               borderColor: '#3cb371',  
                backgroundColor: [  
                 "#00FFEC",  
@@ -216,101 +337,11 @@ export class StatruleComponent  {
 
 
     
-    var ctx = document.getElementById("myBarChart1");
-    var myLineChart = new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: ["PreCalcul", "Parcours", "Routing"],
-        datasets: [{
-          label: "number",
-          backgroundColor: "#0195FC",
-          borderColor: "rgba(2,117,216,1)",
-          data: [this.statpreCalculupdate, this.statParcoursupdate,this.statroutingupdate]
-        }],
-      },
-      options: {
-        scales: {
-          xAxes: [{
-            time: {
-              unit: 'month'
-            },
-            gridLines: {
-              display: false
-            },
-            ticks: {
-              maxTicksLimit: 6
-            }
-          }],
-          yAxes: [{
-            ticks: {
-              min: 0,
-              max: 25,
-              maxTicksLimit: 5
-            },
-            gridLines: {
-              display: true
-            }
-          }],
-        },
-        legend: {
-          display: false
-        }
-      }
-    });
-    
-
+   
 
 
       
-    var ctx = document.getElementById("myAreaChart1");
-    var myLineChart = new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: ["Routing", "Parcours", "PreCalcul"],
-        datasets: [{
-          label: "Sessions",
-          lineTension: 0.3,
-          backgroundColor: "#CEFEF5",
-          borderColor: "#06D4AD",
-          pointRadius: 5,
-          pointBackgroundColor: "#06D4AD",
-          pointBorderColor: "#06D4AD",
-          pointHoverRadius: 5,
-          pointHoverBackgroundColor: "rgba(2,117,216,1)",
-          pointHitRadius: 50,
-          pointBorderWidth: 2,
-          data:  [9,4,8] ,
-        }],
-      },
-      options: {
-        scales: {
-          xAxes: [{
-            time: {
-              unit: 'date'
-            },
-            gridLines: {
-              display: false
-            },
-            ticks: {
-              maxTicksLimit: 7
-            }
-          }],
-          yAxes: [{
-            ticks: {
-              min: 0,
-              max: 10,
-              maxTicksLimit: 5
-            },
-            gridLines: {
-              color: "rgba(0, 0, 0, .125)",
-            }
-          }],
-        },
-        legend: {
-          display: false
-        }
-      }
-    });
+   
 
     var ctx = document.getElementById('myChartnchalah');
     var chart = new Chart(ctx, {

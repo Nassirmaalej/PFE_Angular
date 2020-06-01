@@ -6,7 +6,7 @@
 
 <div class="wrapper">
   
-    
+  <app-ff></app-ff>
 
   <div class="page-header page-header-small">
       <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('https://www.xmple.com/wallpaper/linear-orange-black-gradient-highlight-1920x1080-c2-000000-ff4500-l-67-a-345-f-21.svg');" >
@@ -90,13 +90,29 @@
                             <div class="phone-feedback">
                             
                             </div>
+                            <div class="form-group">
+                                <label for="sex" class="col-form-label">Sexe</label>
+                                <input type="text" class="form-control" id="Sexe" required [(ngModel)]="predict.sex" name="sex">
+                                <div class="phone-feedback">
+                              </div>
+                              </div>
+                           
                         </div>
+                        
                         </form>
                         <button type="submit" class="btn btn-success" (click)="save()"><i class="fa fa-paper-plane" aria-hidden="true"></i>  envoyer  &nbsp;</button>
 
                     </div>
                 </div>
             </div>
+
+          
+
+
+
+
+
+
                 
             <div class="col-md-6">
                 <div class="card"> 
@@ -104,13 +120,13 @@
                        
                       
                         <div class="example-config">
-                            <button #anchor (click)="onToggle()" class="k-button"   class="btn btn-primary btn-lg"         >PREDICTION</button>
+                            <button #anchor (click)="open(content)" class="k-button"   class="btn btn-primary btn-lg"         >PREDICTION</button>
                           </div>
                           <br>
                           <kendo-popup [anchor]="anchor" (anchorViewportLeave)="show = false" *ngIf="show">
                               <div class='content'>
                                   <!-- User-defined content -->
-                              <strong>Prediction : Desimlockage  avec un taux d'erreur 0.8745</strong>   
+                              <strong>{{this.result}}</strong>   
                               <br>
                               <br>
                               <button type="submit" class="btn btn-success" ><i class="fa fa-paper-plane" aria-hidden="true"></i>  envoyer  &nbsp;</button>
@@ -166,4 +182,31 @@
           </div>
         </div>  
 </div>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title"><strong>Le raison d'appel :</strong> </h4>
+      <br>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class='content'>
+        <!-- User-defined content -->
+    <strong>{{this.result}}</strong>   
+    <br>
+    <br>
+
+    </div>
+   
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary"><i class="fa fa-forward"></i>Send</button>
+      </div>
+        <br>
+  </ng-template>
+
+
+
+
 

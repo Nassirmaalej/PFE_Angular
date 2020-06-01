@@ -552,7 +552,7 @@ getx() {    this.clickedEvent = true;
   var myPieChart = new Chart(ctx, {
     type: 'polarArea',
     data: {
-      labels: ["whrite", "delte", "update"],
+      labels: ["Inserion", "Suppression", "Modification"],
       datasets: [{
         data: [this.rulex, this.ruley, this.rulez],
         backgroundColor: [
@@ -1111,7 +1111,7 @@ this.clickedEvent = true;
   var myPieChart = new Chart(ctx, {
     type: 'polarArea',
     data: {
-      labels: ["whrite", "delte", "update"],
+      labels: ["Inserion", "Suppresssion", "Modification"],
       datasets: [{
         data: [this.rulex, this.ruley, this.rulez],
         backgroundColor: [
@@ -1705,7 +1705,7 @@ this.clickedEvent = true;
     var myPieChart = new Chart(ctx, {
       type: 'polarArea',
       data: {
-        labels: ["whrite", "delte", "update"],
+        labels: ["Insertion", "Suppression", "Modification"],
         datasets: [{
           data: [this.rulex, this.ruley, this.rulez],
           backgroundColor: [
@@ -2264,7 +2264,7 @@ this.clickedEvent = true;
     var myPieChart = new Chart(ctx, {
       type: 'polarArea',
       data: {
-        labels: ["whrite", "delte", "update"],
+        labels: ["Insertion", "Suppression", "Modification"],
         datasets: [{
           data: [this.rulex, this.ruley, this.rulez],
           backgroundColor: [
@@ -2285,7 +2285,7 @@ this.clickedEvent = true;
     
         // The data for our dataset
         data: {
-            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+            labels: ['Jan', 'Fev', 'Mar', 'Avr', 'May', 'Jui', 'Juil'],
             datasets: [{
                 label: 'My First dataset',
                 backgroundColor: 'rgb(255, 99, 132)',
@@ -2306,7 +2306,7 @@ this.clickedEvent = true;
     var myLineChart = new Chart(ctx, {
       type: 'line',
       data: {
-        labels: ["Mar 1", "Mar 2", "Mar 3", "Mar 4", "Mar 5", "Mar 6", "Mar 7", "Mar 8", "Mar 9", "Mar 10", "Mar 11", "Mar 12", "Mar 13"],
+        labels: ["Juin 1", "Juin 2", "Juin 3", "Juin 4", "Juin 5", "Juin 6", "Juin 7", "Juin 8", "Juin 9", "Juin 10", "Juin 11", "Juin 12", "Juin 13"],
         datasets: [{
           label: "Sessions",
           lineTension: 0.3,

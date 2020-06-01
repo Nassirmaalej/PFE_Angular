@@ -5,7 +5,8 @@ import { RuleService } from 'app/components/Services/rule.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs/operators';
-import { AuthenticationService } from 'app/login/auth.service';
+import { AuthenticationService } from 'app/login3/auth.service';
+import { AuthentificationService } from './AuthentificationService';
 
 
 @Component({
@@ -14,8 +15,8 @@ import { AuthenticationService } from 'app/login/auth.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  ngOnInit(): void {
-    throw new Error("Method not implemented.");
+
+   ngOnInit(): void {
   }
     rules: Array<any>;
     rule: Observable<rule[]>;
@@ -32,7 +33,7 @@ export class LoginComponent implements OnInit {
   loginSuccess = false;
   
     constructor(private ruleService: RuleService,private route: ActivatedRoute, private authenticationService: AuthenticationService ,
-      private router: Router,
+      private router: Router,private loginservice: AuthentificationService
       ) { }
 
  
@@ -41,12 +42,42 @@ export class LoginComponent implements OnInit {
           this.invalidLogin = false;
           this.loginSuccess = true;
           this.successMessage = 'Login Successful.';
-          this.router.navigate(['/rule']);
-         
+          if (this.loginservice.authenticate(this.username, this.password)==0
+          ) {
+            this.router.navigate(['/crudutilisateur'])
+            this.invalidLogin = false
+          }
+          else if (this.loginservice.authenticate(this.username, this.password)==1
+          ) {
+            this.router.navigate(['/rule'])
+            this.invalidLogin = false
+          } else
+          this.router.navigate(['/rule'])
+            this.invalidLogin = true
         }, () => {
           this.invalidLogin = true;
           this.loginSuccess = false;
         });      
       }
 
+      checkLogin() {
+        
+      }
+
+      handleLogin1() {
+        this.username === "b" ;
+         this.password === "b";
+
+        this.authenticationService.authenticationService("a", "a").subscribe((result)=> {
+          this.invalidLogin = false;
+          this.loginSuccess = true;
+          this.successMessage = 'Login Successful.';
+          this.router.navigate(['/addutilisateur1'])
+
+        }, () => {
+          this.invalidLogin = true;
+          this.loginSuccess = false;
+        });      
+      }
+ 
 }

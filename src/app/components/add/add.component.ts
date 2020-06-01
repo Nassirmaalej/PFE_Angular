@@ -41,7 +41,6 @@ export class AddComponent implements OnInit {
   onSubmit() {
     this.save();  
     console.log(this.regle)  ;
-    this.router.navigate(['/rule']);
 
   }
 

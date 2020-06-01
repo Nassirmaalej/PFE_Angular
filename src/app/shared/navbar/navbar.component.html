@@ -12,14 +12,13 @@
             <span class="button-bar"></span>
         </a>
          <div ngbDropdownMenu>
-         
-           <a class="dropdown-item" [routerLink]="['/statrule']"    ><strong style="color:rgba(226, 130, 21, 0.87);"  >DASHBOARD DE LA TABLE RULE </strong></a>
-           <a class="dropdown-item" [routerLink]="['/test']"    ><strong style="color:rgba(226, 130, 21, 0.87);"  >MAP </strong></a>
-           <a class="dropdown-item" [routerLink]="['/test2']"> <strong style="color:rgba(226, 130, 21, 0.87);"  >PREDICTION PAGE</strong></a>
+          <a class="dropdown-item" [routerLink]="['/stat']"> <strong style="color:rgba(226, 130, 21, 0.87);"  >
+            Tableau de bord "Supervision de la base de données"</strong></a>
+
+           <a class="dropdown-item" [routerLink]="['/statrule']"    ><strong style="color:rgba(226, 130, 21, 0.87);"  >Tableau de bord de la table "Rule" </strong></a>
+           <a class="dropdown-item" [routerLink]="['/test']"    ><strong style="color:rgba(226, 130, 21, 0.87);"  > Tableau de bord "Analyse de données clients"  </strong></a>
            <div class="dropdown-divider"></div>
-           <a class="dropdown-item" href="#">Separated link</a>
            <div class="dropdown-divider"></div>
-           <a class="dropdown-item" href="#">One more separated link</a>
          </div>
        </div>
     </div>
@@ -46,9 +45,9 @@
           </li>
 
               <li class="nav-item">
-                  <a class="nav-link" [routerLink]="['/stat']" >
+                  <a class="nav-link" [routerLink]="['/test2']" >
                     <i class="now-ui-icons files_paper"></i>
-                    <p><strong>Statistique</strong></p>
+                    <p><strong>PREDICTIONS</strong></p>
                   </a>
               </li>
              <li class="nav-item">

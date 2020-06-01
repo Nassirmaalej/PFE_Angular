@@ -1,105 +1,201 @@
 
-<!------ Include the above in your HEAD tag ---------->
-
-<link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Teko:400,700" rel="stylesheet">
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <div class="wrapper">
+  
+    
 
+  <div class="page-header page-header-small">
+      <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('https://www.xmple.com/wallpaper/linear-orange-black-gradient-highlight-1920x1080-c2-000000-ff4500-l-67-a-345-f-21.svg');" >
 
+      </div>
 
-<div class="page-header page-header-small">
-<div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('https://images.squarespace-cdn.com/content/v1/57ffb3c61b631bf53dfad02d/1479502931209-1BRNCOSI1R3AZVML74G0/ke17ZwdGBToddI8pDm48kByW24SeBs49-0P_g8v3QGZ7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UQBFUX4xvAh0yd0AT88fg-BpxILVKzwz1yC_SJHYteJFPHrI9RoTG-J-GQO4TMy6uQ/iStock-487974242.jpg?format=2500w');" >
+      <div class="container">
+          <div class="content-center">
 
-</div>
-
-<div class="container">
-   <div class="content-center">
-     <h1 class="section-header"><span class="content-header wow fadeIn " data-wow-delay="0.2s" data-wow-duration="2s"> <strong>Gestion des régles</strong></span></h1>        
-       <div class="text-center">
-     
-
-
-
-</div>
-   </div>
-</div>
-</div>
-</div>
-<div  id="contact">
-
-     <div class="section-content">
-         <h2>REMPLIR LA FORMULAIRE</h2>
-</div>
-
-     <div class="container">
- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+              
+          </div>
+      </div>
+  </div>
+  </div>
 <!------ Include the above in your HEAD tag ---------->
+<br>
+<br>
+<!--
+    Realised by Thibault Leveau
+    https://www.linkedin.com/in/thibault-leveau-a76923ba/
+-->
+<div class="container" style="margin-top: 1em;">
+    <!-- Sign up form -->
+    <form>
+        <!-- Sign up card -->
+        <div class="card person-card">
+            <div class="card-body">
+                
+                <!-- Sex image -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Orange_logo.svg/1200px-Orange_logo.svg.png" width="60">
+<br>
+<br>
+                <h2 id="who_message" class="card-title"> Modifier la regle </h2>
+                <br>
+    
+                <!-- First row (on medium screen) -->
+                <div class="row">
+                
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-<div class="container">
-
-<div class="row justify-content-center">
- <div class="col-12 col-md-8 col-lg-6 pb-5">
-
-
-             <!--Form with header-->
-
-             <form action="mail.php" method="post">
-                 <div class="card border-primary rounded-0">
-                   <form (ngSubmit)="onSubmit()" class="section-content">
-                     <div class="col md-6 form-line">
-                       <div class="form-group">
-                         <label for="name">
-                           
-                           
-                           
-                           <strong>ID</strong></label>
-                         <input type="number" class="form-control" id="id" required [(ngModel)]="regle.id" name="name">
-                       </div>
-           
-                       
-                       <div class="form-group">
-                         <label for="name"><strong>CATEGORIE</strong></label>
-                         <input type="text" class="form-control" id="category" required [(ngModel)]="regle.category" name="date">
-                       </div>
-           
+                
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6" >
+              <form action="mail.php" method="post">
+                <div class="card border-primary rounded-0">
+                  <form (ngSubmit)="onSubmit()" class="section-content">
+                    <div class="col md-6 form-line">
+                      <div class="form-group">
+                        <label for="name">
+                          
+                          
+                          
+                          <strong>ID</strong></label>
+                        <input type="number" class="form-control" id="id" required [(ngModel)]="regle.id" name="name">
+                      </div>
+          
                       
-                       </div>
-                       
-           
-           
-           
-           
-           
-           
-           
-           
-           
-                       <div class="col md-6">
-                         <div class="form-group">
-                           <label for="name"><strong>CODE</strong></label>
-                           <input type="text" class="form-control" id="type" required [(ngModel)]="regle.code" name="type">
-                         </div>
+                      <div class="form-group">
+                        <label for="name"><strong>Categorie</strong></label>
+                        <input type="text" class="form-control" id="category" required [(ngModel)]="regle.category" name="date">
+                      </div>
+   
+                      
+          
+                      <div class="form-group">
+                        <label for="name"><strong>Code</strong></label>
+                        <input type="text" class="form-control" id="code" required [(ngModel)]="regle.code" name="date">
+                      </div>
+                      </div>
+          
+          
+          
+          
+          
+          
+          
+                      <div class="col md-6">
+                        <div class="form-group">
+                          <label for="name"><strong>Raison</strong></label>
+                          <input type="text" class="form-control" id="type" required [(ngModel)]="regle.raison" name="type">
+                        </div>
+                    
+                        <div>
+          
+                        </div>
+                        
+                    </div>
+                 
+                  </form>
+
+                </div>
+            </form>
+              </div>
+              <div class="col-md-6" >
+
+                <form action="mail.php" method="post">
+                  <div class="card border-primary rounded-0">
+                    <form (ngSubmit)="onSubmit()" class="section-content">
+                      <div class="col md-9 form-line">
                      
-                         <div>
-                             <button type="submit" class="btn btn-success"><i class="fa fa-paper-plane" aria-hidden="true"></i>  evoyer  &nbsp;</button>
-           
-                         </div>
-                         <button type="reset" class="btn btn-danger"> &nbsp;&nbsp; &nbsp; Annuler &nbsp;  &nbsp;&nbsp; </button>
+            
+                        
+                        
+                          <div class="form-group">
+                            <label for="name"><strong>description</strong></label>
+                            <input type="text" class="form-control" id="type" required [(ngModel)]="regle.description" name="type">
+                          </div>
+                       
+                      
+                        <div class="form-group">
+                          <label for="name"><strong>Media</strong></label>
+                          <input type="text" class="form-control" id="category" required [(ngModel)]="regle.media" name="date">
+                        </div>
+                        
+                       
+
+                        <div class="form-group">
+                          <label for="name"><strong>Type</strong></label>
+                          <input type="text" class="form-control" id="category" required [(ngModel)]="regle.sub_type" name="date">
+                        </div>
+
+
+                        </div>
+                        
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                        <div class="col md-6">
+                          
                          
-                     </div>
-                  
-                   </form>
-
-                 </div>
-             </form>
-             <!--Form with header-->
-
-
-         </div>
+                              <button type="submit" class="btn btn-success"><i class="fa fa-paper-plane" aria-hidden="true"></i>  evoyer  &nbsp;</button>
+           
+                        
+                          <button type="reset" class="btn btn-danger"> &nbsp;&nbsp; &nbsp; Annuler &nbsp;  &nbsp;&nbsp; </button>
+                    
+                      </div>
+                
+                    </form>
+  
+                  </div>
+              </form>
+              </div>
+              
+            </div>
+           
+     
+        <!------ Include the above in your HEAD tag ---------->
+        
+        <div class="container">
+            <div class="row">
+        <!-- Button trigger modal By Ved Prakash Gupta -->
+    
+        
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+              </div>
+              <div class="modal hide" id="myModal">
+                 
+                    <button type="button" class="close" data-dismiss="modal">x</button>
+                    <h3>Login to MyWebsite.com</h3>
+                  </div>
+                  <div class="modal-body" align="center">
+                    <form method="post" action='' name="login_form" align="center">
+                      <p><input type="text" class="span3" name="Name" id="email" placeholder="Name"></p>
+                      <p><input type="email" class="span3" name="email" placeholder="Email"></p>
+                      <p><input type="text" class="span3" name="website" placeholder="Website"></p>
+                      <p><textarea class="span3" name="msg" placeholder="message" rows="5" ></textarea></p>
+                      </form>
+                  </div>
+                  <div class="modal-footer">
+                    New To MyWebsite.com?
+                    <a href="#" class="btn btn-primary">Register</a>
+                  </div>
+                </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary"><i class="fa fa-forward"></i>Send</button>
+              </div>
+            </div>
+          </div>
+        </div>  
 </div>
-</div>
-</div>
+

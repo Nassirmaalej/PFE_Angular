@@ -1,7 +1,7 @@
 import { Component, OnInit, Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { rule } from '../Services/rule';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 import { RuleService } from "../Services/rule.service";
 import * as XLSX from 'xlsx'; 
 
@@ -18,6 +18,10 @@ export class RuleComponent implements OnInit {
   rule: Observable<rule[]>;
   connect: Observable<rule[]>;
   clickedEvent = false;
+  navbar: any;
+  element: any;
+  renderer: any;
+  location: any;
 
   constructor(private ruleService: RuleService,
     private router: Router) { }
@@ -31,7 +35,25 @@ public rule1=[];
     {name: 'test', email: 'test@gmail.com', website:'test.com'},];
     title = 'angulardatatables';
     dtOptions: any = {};
+    private _router: Subscription;
   ngOnInit() {
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
     this.clickedEvent = true;
     this.ruleService.getevent().subscribe(data => {
     this.rule = data
@@ -83,7 +105,7 @@ public rule1=[];
     await this.delay(3000);
     this.getevent();
   
-  }
+  } 
   fileName= 'ExcelSheet.xlsx';  
 
   exportexcel(): void 
@@ -99,9 +121,88 @@ public rule1=[];
        /* save to file */
        XLSX.writeFile(wb, this.fileName);
 			
-    }
+    
+
+
+
+
+
+
+    var navbar : HTMLElement = this.element.nativeElement.children[0].children[0];
+    this._router = this.router.events.filter(event => event instanceof NavigationEnd).subscribe((event: NavigationEnd) => {
+        if (window.outerWidth > 991) {
+            window.document.children[0].scrollTop = 0;
+        }else{
+            window.document.activeElement.scrollTop = 0;
+        }
+        this.navbar.sidebarClose();
+
+        this.renderer.listen('window', 'scroll', (event) => {
+            const number = window.scrollY;
+            var _location = this.location.path();
+            _location = _location.split('/')[2];
+
+            if (number > 150 || window.pageYOffset > 150) {
+                navbar.classList.remove('navbar-transparent');
+            } else if (_location !== 'login' && this.location.path() !== '/nucleoicons') {
+                // remove logic
+                navbar.classList.add('navbar-transparent');
+            }
+        });
+    });
+   // JSON.parse(sessionStorage.getItem(AUTHORITIES_KEY)|| "null").forEach(authority => {
+        //this.roles.push(authority.authority);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var navbar : HTMLElement = this.element.nativeElement.children[0].children[0];
+    this._router = this.router.events.filter(event => event instanceof NavigationEnd).subscribe((event: NavigationEnd) => {
+        if (window.outerWidth > 991) {
+            window.document.children[0].scrollTop = 0;
+        }else{
+            window.document.activeElement.scrollTop = 0;
+        }
+        this.navbar.sidebarClose();
+
+        this.renderer.listen('window', 'scroll', (event) => {
+            const number = window.scrollY;
+            var _location = this.location.path();
+            _location = _location.split('/')[2];
+
+            if (number > 150 || window.pageYOffset > 150) {
+                navbar.classList.remove('navbar-transparent');
+            } else if (_location !== 'login' && this.location.path() !== '/nucleoicons') {
+                // remove logic
+                navbar.classList.add('navbar-transparent');
+            }
+        });
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   }
 
 
-
+}

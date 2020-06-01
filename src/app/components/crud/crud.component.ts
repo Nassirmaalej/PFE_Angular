@@ -95,6 +95,18 @@ regle: Regle = new Regle();
   }
 
 
+  save1() {
+    this.regleService.createregle(this.regle)
+      .subscribe(data => console.log(data), error => console.log(error));
+    this.regle = new Regle();
+    this.router.navigate(['/crud']);
+
+    
+  }
+
+  onSubmit1() {
+    this.save1();    
+  }
 
 
 

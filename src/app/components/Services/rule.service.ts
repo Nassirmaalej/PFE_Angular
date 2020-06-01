@@ -95,6 +95,23 @@ export class RuleService {
 
   
 
+private blackliste='http://localhost:8081/parcour/blackliste';
+private clientVIP='http://localhost:8081/parcour/clientVIP';
+private clientenrecouvrement='http://localhost:8081/parcour/clientenrecouvrement';
+private Parcoursstandardlangagenaturel='http://localhost:8081/parcour/Parcoursstandardlangagenaturel';
+
+
+
+
+
+
+private region1='http://localhost:8081/site/region1';
+private region2='http://localhost:8081/site/region2';
+private region3='http://localhost:8081/site/region3';
+private region4='http://localhost:8081/site/region4';
+private region5='http://localhost:8081/site/region5';
+
+
 
 
 
@@ -259,6 +276,37 @@ export class RuleService {
   {return this.http.get(this.Informationsurlaconsommation)}
   getChoixintermédairenonvalide():Observable<any>
   {return this.http.get(this.Choixintermédairenonvalide)}
+
+
+
+
+
+  getblackliste():Observable<any>
+  {return this.http.get(this.blackliste)}
+  getclientVIP():Observable<any>
+  {return this.http.get(this.clientVIP)}
+  getclientenrecouvrement():Observable<any>
+  {return this.http.get(this.clientenrecouvrement)}
+  getParcoursstandardlangagenaturel():Observable<any>
+  {return this.http.get(this.Parcoursstandardlangagenaturel)}
+
+
+
+
+
+  
+  getregion1():Observable<any>
+  {return this.http.get(this.region1)}
+  getregion2():Observable<any>
+  {return this.http.get(this.region2)}
+  getregion3():Observable<any>
+  {return this.http.get(this.region3)}
+  getregion4():Observable<any>
+  {return this.http.get(this.region4)}
+  getregion5():Observable<any>
+  {return this.http.get(this.region5)}
+
+
 
 
 

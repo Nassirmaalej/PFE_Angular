@@ -53,21 +53,23 @@
   <div class="card person-card">
     <div class="card-body">
  
-   <a href="/add">  <button class="btn btn-success">  <i class="fas fa-edit"></i> Ajouter rule </button> </a>
+   <a [routerLink]="['/add']">  <button class="btn btn-success">  <i class="fas fa-edit"></i> Ajouter rule </button> </a>
 
 
     <div class="container">
 
-	    <div class="row">
-        
-        <table class="table table-striped table-bordered table-sm row-border hover" datatable [dtOptions]="dtOptions">
+	    <div class="table-responsive" id="sailorTableArea">
+            <table id="excel-table" class="table table-striped table-bordered" width="100%">
           <thead>
 		        <tr class="thead-dark">
 		            <th>Category</th>
 		            <th>Code</th>
-		            <th> Description</th>
-                <th>Supprimer</th>
-                <th>Modifier</th>
+                <th> Description</th>
+                <th>Raison</th>
+                <th>Media</th>
+                <th>Type</th>
+
+                <th>Gestion</th>
 		        </tr>
 		    </thead>
 		        <tbody>
@@ -78,94 +80,30 @@
                    <h6><td>{{x.category}}</td></h6> 
                      <td>{{x.code}}</td>
                      <td>{{x.description}}</td>
-                      <td><button (click)=deleteregle(x) class="btn btn-danger">    <i class="fas fa-trash"></i>   Delete</button> </td>
-                      <td> 
-                        
-                        
-                        <ng-template #content let-modal>
-                          <div class="modal-header">
-                            <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
-                            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                          <div class="modal-body">
-                            <form action="mail.php" method="post">
-                              <div class="card border-primary rounded-0">
-                                <form (ngSubmit)="onSubmit()" class="section-content">
-                                  <div class="col md-6 form-line">
-                                    <div class="form-group">
-                                      <label for="name">
-                                        
-                                        
-                                        
-                                        <strong>ID</strong></label>
-                                      <input type="number" class="form-control" id="id" required [(ngModel)]="regle.id" name="name">
-                                    </div>
-                        
-                                    
-                                    <div class="form-group">
-                                      <label for="name"><strong>CATEGORIE</strong></label>
-                                      <input type="text" class="form-control" id="category" required [(ngModel)]="regle.category" name="date">
-                                    </div>
-                        
-                                   
-                                    </div>
-                                    
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                                    <div class="col md-6">
-                                      <div class="form-group">
-                                        <label for="name"><strong>CODE</strong></label>
-                                        <input type="text" class="form-control" id="type" required [(ngModel)]="regle.code" name="type">
-                                      </div>
-                                  
-                                      <div>
-                        
-                                      </div>
-                                      <button type="reset" class="btn btn-danger"> &nbsp;&nbsp; &nbsp; Annuler &nbsp;  &nbsp;&nbsp; </button>
-                                      
-                                  </div>
-                               
-                                </form>
-             
-                              </div>
-                          </form>
-                          </div>
-                          <div class="modal-footer">
-                            <button class="btn btn-primary" (click)=updateregle(x)>  <i class="fas fa-edit"></i> Edit </button>
-                            <button type="submit" class="btn btn-success"><i class="fa fa-paper-plane" aria-hidden="true"></i>  evoyer  &nbsp;</button>
-                          </div>
-                        </ng-template>
-                        
-                        <button class="btn btn-primary" (click)="open(content)">Edit</button>
-                        
-                   
-                        
-                     
-                        
-                        
-                       </td> 
-                      
+                     <td>{{x.reason}}</td>
+                     <td>{{x.Media}}</td>
+                     <td>{{x.Type}}</td>
 
-              
-<!--                        <button class="btn btn-primary" (click)=updateregle(x)>  <i class="fas fa-edit"></i> Edit </button>
- -->                  
-                    </tr>
+                      <td><button (click)=deleteregle(x) class="btn btn-danger">    <i class="fas fa-trash"></i>  </button>
+                        <button class="btn btn-primary" (click)=updateregle(x)>  <i class="fas fa-edit"></i>  </button>
+
+                    </td>
+                    
+                    
 		            
 		            
 		            
 		        
 		        </tbody>
 		    </table>
-	</div>
+    </div>
+    
+
+
+
+
+
+    
     </div>
     </div>
     </div>

@@ -34,7 +34,7 @@
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Orange_logo.svg/1200px-Orange_logo.svg.png" width="60">
 <br>
 <br>
-                <h2 id="who_message" class="card-title">Entrez le numéro de client </h2>
+                <h2 id="who_message" class="card-title">Remplir la formulaire </h2>
                 <br>
     
                 <!-- First row (on medium screen) -->
@@ -67,7 +67,19 @@
                         <input type="text" class="form-control" id="category" required [(ngModel)]="regle.category" name="date">
                       </div>
           
-                     
+                      <div class="form-group">
+                        <label for="name"><strong>reason</strong></label>
+                        <input type="text" class="form-control" id="category" required [(ngModel)]="regle.reason" name="date">
+                      </div>
+
+
+                      <div class="form-group">
+                        <label for="name">
+                          <strong>code</strong></label>
+                        <input type="number" class="form-control" id="id" required [(ngModel)]="regle.code" name="name">
+                      </div>
+
+
                       </div>
                       
           
@@ -82,10 +94,8 @@
                       <div class="col md-6">
                         
                         <div>
-                            <button type="submit" class="btn btn-success"><i class="fa fa-paper-plane" aria-hidden="true"></i>  evoyer  &nbsp;</button>
          
                         </div>
-                        <button type="reset" class="btn btn-danger"> &nbsp;&nbsp; &nbsp; Annuler &nbsp;  &nbsp;&nbsp; </button>
                   
                     </div>
               
@@ -96,7 +106,59 @@
             <!--Form with header-->
                  
                 </div>
-                aa
+                <div class="col-md-6" >
+
+                <form action="mail.php" method="post">
+                  <div class="card border-primary rounded-0">
+                    <form (ngSubmit)="onSubmit()" class="section-content">
+                      <div class="col md-9 form-line">
+                     
+            
+                        
+                        <div class="form-group">
+                          <label for="name"><strong>description</strong></label>
+                          <input type="text" class="form-control" id="category" required [(ngModel)]="regle.description" name="date">
+                        </div>
+            
+                        <div class="form-group">
+                          <label for="name"><strong>media</strong></label>
+                          <input type="text" class="form-control" id="category" required [(ngModel)]="regle.media" name="date">
+                        </div>
+                        
+                       
+
+                        <div class="form-group">
+                          <label for="name"><strong>sub_type</strong></label>
+                          <input type="text" class="form-control" id="category" required [(ngModel)]="regle.sub_type" name="date">
+                        </div>
+
+
+                        </div>
+                        
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                        <div class="col md-6">
+                          
+                         
+                              <button type="submit" class="btn btn-success"><i class="fa fa-paper-plane" aria-hidden="true"></i>  evoyer  &nbsp;</button>
+           
+                        
+                          <button type="reset" class="btn btn-danger"> &nbsp;&nbsp; &nbsp; Annuler &nbsp;  &nbsp;&nbsp; </button>
+                    
+                      </div>
+                
+                    </form>
+  
+                  </div>
+              </form>
+              </div>
             </div>
            
      

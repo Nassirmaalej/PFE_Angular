@@ -31,6 +31,11 @@ import {DataTablesModule} from 'angular-datatables';
 import { PredictionComponent } from './prediction/prediction.component';
 import { Test2Component } from './test2/test2.component';
 import { MenuComponent } from './menu/menu.component';
+import { CrudutilisateurComponent } from './crudutilisateur/crudutilisateur.component';
+import { AddutilisateurComponent } from './addutilisateur/addutilisateur.component';
+import { EditutilisateurComponent } from './editutilisateur/editutilisateur.component';
+import { Addutilisateur1Component } from './addutilisateur1/addutilisateur1.component';
+
 
 
 @NgModule({
@@ -42,6 +47,7 @@ import { MenuComponent } from './menu/menu.component';
         RouterModule,
         HttpClientModule,
         JwBootstrapSwitchNg2Module,
+       
         DataTablesModule
       ],
     declarations: [
@@ -57,6 +63,9 @@ import { MenuComponent } from './menu/menu.component';
         TestComponent,
         Test1Component,
         LinechartComponent,
+       
+        
+
         
         Login1Component,
         
@@ -79,6 +88,17 @@ import { MenuComponent } from './menu/menu.component';
         Test2Component,
         
         MenuComponent,
+        
+        CrudutilisateurComponent,
+        
+        AddutilisateurComponent,
+        
+        EditutilisateurComponent,
+        
+        Addutilisateur1Component,
+        
+     
+        
         
         
         
